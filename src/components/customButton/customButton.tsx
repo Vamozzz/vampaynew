@@ -1,19 +1,26 @@
-import React from 'react';
-import Button from '@mui/material/Button';
+import React from "react";
+import Button from "@mui/material/Button";
 
 interface CustomButtonProps {
   filled?: boolean;
   onClick?: () => void;
   children: React.ReactNode;
+  buttonSize?: "small" | "large" | "medium";
 }
 
-const CustomButton: React.FC<CustomButtonProps> = ({ filled = false, onClick, children }) => {
+const CustomButton: React.FC<CustomButtonProps> = ({
+  filled = false,
+  onClick,
+  children,
+  buttonSize,
+}) => {
   return (
     <Button
-      variant={filled ? 'contained' : 'outlined'}
+      size={buttonSize || "small"}
+      variant={filled ? "contained" : "outlined"}
       style={{
-        backgroundColor: filled ? '#4CAF50' : 'transparent',
-        color: filled ? '#fff' : '#333',
+        backgroundColor: filled ? "#6C54FF" : "transparent",
+        color: filled ? "#fff" : "#333",
       }}
       onClick={onClick}
     >
