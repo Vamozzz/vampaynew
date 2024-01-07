@@ -49,10 +49,10 @@ const Navbar = () => {
         </div>
         <div className="flex space-x-4 justify-center items-center">
           <div className="hidden sm:flex  space-x-2 ">
-            <CustomButton filled={true} buttonSize={"small"}>
+            <CustomButton >
               login
             </CustomButton>
-            <CustomButton>Open an Account</CustomButton>
+            <CustomButton filled={true} endIcon={true}>Open an Account</CustomButton>
           </div>
 
           <div className="md:hidden text-center " onClick={toggleNavigation}>
@@ -66,8 +66,8 @@ const Navbar = () => {
       </div>
 
       {showNav ? (
-        <div className=" relative flex justify-center  bg-black mt-2 ">
-          <div className=" absolute w-[90%] mx-auto bg-black  rounded-lg ">
+        <div className=" relative flex justify-center z-100 bg-black mt-2 ">
+          <div className=" absolute w-[90%] mx-auto   rounded-lg ">
             {/* {navigationItems.map((item, index) => (
             <div key={index}>
               <Link href={item?.link}>{item?.name}</Link>
