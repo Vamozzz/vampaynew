@@ -14,9 +14,9 @@ interface FeaturesCardProps {
   cards: CardItem[];
 }
 
-const FeaturesCard: React.FC<FeaturesCardProps> = ({ cards }) => {
+const FeaturesCard: React.FC<FeaturesCardProps> = ({ cards =[] }) => {
   return (
-    <div className="w-full flex flex-wrap gap-2 lg:flex-nowrap  justify-around items-center">
+    <div className="w-full  flex flex-wrap gap-2 lg:flex-nowrap  justify-around items-center">
       {cards.map((cardItem, index) => (
         <div
           key={index}
@@ -37,7 +37,7 @@ const FeaturesCard: React.FC<FeaturesCardProps> = ({ cards }) => {
           <p className=" features_card_content text-center lg:text-left">
             {cardItem.cardContent}
           </p>
-          <TextButton endIcon={true}>Read More</TextButton>
+          {cardItem?.linkText && <TextButton endIcon={true}>{cardItem?.linkText}</TextButton>}
         </div>
       ))}
     </div>

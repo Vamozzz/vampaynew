@@ -18,25 +18,34 @@ import {
   Tab,
   Tabs,
 } from "@mui/material";
-import {navigationItems} from "@/constants/features"
+import { navigationItems } from "@/constants/features";
+import TemporaryDrawer from "../drawer/drawer";
 
 interface NavigationItem {
   name: string;
   link: string;
 }
-// NavigationItem[] 
+// NavigationItem[]
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
-  
+  const [showProducts, setShowProducts] =useState(false);
+  const [showCompany, setShowCompany] =useState(false)
 
   const toggleNavigation = () => {
     setShowNav((value) => !value);
-    console.log("clicked");
+  };
+
+  const toggleProductNav = () => {
+    setShowNav((value) => !value);
+  };
+  
+  const toggleCompanyNav = () => {
+    setShowNav((value) => !value);
   };
 
   return (
-    <nav className="">
-      <div className="flex sticky justify-between lg:px-20 items-center p-3 bg-white drop-shadow-md ">
+    <nav className="fixed top-0 w-full z-50">
+      <div className="flex  justify-between lg:px-20 items-center p-3 bg-white drop-shadow-md ">
         <div className="">
           <Image src={"logo.svg"} alt="logo" width={130} height={30} />
         </div>
@@ -49,10 +58,10 @@ const Navbar = () => {
         </div>
         <div className="flex space-x-4 justify-center items-center">
           <div className="hidden sm:flex  space-x-2 ">
-            <CustomButton >
-              login
+            <CustomButton>login</CustomButton>
+            <CustomButton filled={true} endIcon={true}>
+              Open an Account
             </CustomButton>
-            <CustomButton filled={true} endIcon={true}>Open an Account</CustomButton>
           </div>
 
           <div className="md:hidden text-center " onClick={toggleNavigation}>
@@ -65,14 +74,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {showNav ? (
+      {/* {showNav ? (
         <div className=" relative flex justify-center z-100 bg-black mt-2 ">
           <div className=" absolute w-[90%] mx-auto   rounded-lg ">
-            {/* {navigationItems.map((item, index) => (
-            <div key={index}>
-              <Link href={item?.link}>{item?.name}</Link>
-            </div>
-          ))} */}
+            
             <Tabs
               variant="scrollable"
               scrollButtons
@@ -116,7 +121,6 @@ const Navbar = () => {
                   <CloseIcon color="primary" />
                 </ListItemIcon>
                 <ListItemText primary="Inbox" />
-                {/* {open ?<KeyboardArrowUpIcon color="primary" /> : <KeyboardArrowDownIcon />} */}
               </ListItemButton>
               <Collapse timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
@@ -131,6 +135,10 @@ const Navbar = () => {
             </List>
           </div>
         </div>
+      ) : null} */}
+
+      {showNav ? (
+        <TemporaryDrawer showNav={showNav} setShowNav={setShowNav} />
       ) : null}
     </nav>
   );

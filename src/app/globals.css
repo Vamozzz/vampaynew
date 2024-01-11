@@ -44,7 +44,8 @@ body {
 }
 
 .hero__image-overlay {
-  @apply absolute left-0 top-0 bg-hero-bg bg-repeat-round -z-10 w-full  h-[90%] overflow-hidden;
+  @apply min-h-[90vh] bg-gradient-to-b from-rose-200 to-indigo-200 absolute left-0 top-0 lg:bg-hero-bg bg-repeat-round -z-10 w-full  overflow-hidden;
+  /* absolute left-0 top-0 bg-hero-bg bg-repeat-round -z-10 w-full  h-[90%] overflow-hidden; */
 }
 
 .hero__image {
@@ -86,5 +87,7 @@ body {
 .explore_title{
 @apply text-[20px] font-medium leading-[30px] text-center text-black lg:text-[36px] lg:leading-[57px]
 }
+
+
 
 /* explore ends here  */
