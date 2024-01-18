@@ -28,18 +28,18 @@ const Functionality = ({
 
   const gradientTextStyle = {
     background: "linear-gradient(to bottom, #FF9DD3, #866AE8)",
-    WebkitBackgroundClip: "text", // For Safari
+    WebkitBackgroundClip: "text",
     color: "transparent",
   };
   return (
     <div
-      className="flex flex-col justify-between items-center px-4 mb-10 gap-10 lg:flex-row lg:gap-8 lg:px-20 my-20 lg:my-32 "
+      className="flex flex-col justify-between items-center px-4  gap-10 lg:flex-row lg:gap-8 lg:px-20 my-10 lg:my-10 "
       style={{ ...featureStyles }}
     >
       {imageSideLeft && (
         <div className=" bg-white flex-1">
           <Image
-            src={"/TRANSACTION_1.gif"}
+            src={featureImage}
             alt="image"
             width={100}
             height={100}
@@ -48,19 +48,19 @@ const Functionality = ({
         </div>
       )}
       <div className="flex-col space-y-6 flex-1">
-        {header && <p className="features_title ">{header} <span style={gradientTextStyle} className="pl-1">{spannedHeader}</span> </p>}
+        {header && <p className="features_title lg:text-left ">{header} <span style={gradientTextStyle} className="pl-1">{spannedHeader}</span> </p>}
         {subHeader && <p className="features_card_content">{subHeader}</p>}
         {points &&
           points.map((point, index) => (
             <div key={index}>
-              <div className="flex justify-start gap-2">
+              <div className="flex justify-start gap-2 items-start ">
                 <Image
                   src={"/CheckMark.svg"}
                   alt="CheckMark"
                   width={20}
                   height={20}
                 />
-                <h3 className="features_card_more">{point.header}</h3>
+                <h3 className="features_card_more " style={{textAlign:"left"}}>{point.header}</h3>
               </div>
               {point.subHeader && (
                 <p
@@ -84,7 +84,7 @@ const Functionality = ({
       {!imageSideLeft && (
         <div className=" bg-white flex-1 ">
           <Image
-            src={"/gif_1_resize.gif"}
+            src={featureImage}
             alt="image"
             width={100}
             height={100}

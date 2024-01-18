@@ -36,7 +36,7 @@ body {
 /* hero section starts */
 
 .hero__title {
-  @apply text-[28px] text-black font-medium leading-[34px] text-center lg:leading-[68px] lg:text-[56px] lg:text-left font-helvetica;
+  @apply text-[28px] text-black font-medium leading-[34px] text-center md:leading-[68px] md:text-[56px] lg:text-left font-helvetica;
 }
 
 .hero__subtitle {
@@ -44,7 +44,7 @@ body {
 }
 
 .hero__image-overlay {
-  @apply min-h-[90vh] bg-gradient-to-b from-rose-200 to-indigo-200 absolute left-0 top-0 lg:bg-hero-bg bg-repeat-round -z-10 w-full  overflow-hidden;
+  @apply h-[100vh] w-full bg-gradient-to-b from-rose-200 to-indigo-200 absolute left-0 top-0 lg:bg-hero-bg bg-cover -z-10   overflow-hidden;
   /* absolute left-0 top-0 bg-hero-bg bg-repeat-round -z-10 w-full  h-[90%] overflow-hidden; */
 }
 

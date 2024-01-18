@@ -57,7 +57,7 @@ const StatsComponent = () => {
     ];
   
     return (
-      <div className="flex flex-col justify-center items-center rounded-lg lg:flex-row bg-primaryPurple text-white">
+      <div className="flex flex-col justify-center items-center rounded-lg  lg:flex-row bg-primaryPurple text-white">
         {stats.map((item, index) => (
           <div
             key={index}

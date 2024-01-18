@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import TextButton from "../customButton/textButton";
+import { gotoProducts } from "@/utils/customFunctions";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface CardItem {
   cardTitle: string;
@@ -8,13 +12,15 @@ interface CardItem {
   cardContent: string;
   linkText: string;
   linkValue: string;
+  gotoWhere?: () => void;
 }
 
 interface FeaturesCardProps {
   cards: CardItem[];
 }
 
-const FeaturesCard: React.FC<FeaturesCardProps> = ({ cards =[] }) => {
+const FeaturesCard: React.FC<FeaturesCardProps> = ({ cards = [] }) => {
+  const route = useRouter();
   return (
     <div className="w-full  flex flex-wrap gap-2 lg:flex-nowrap  justify-around items-center">
       {cards.map((cardItem, index) => (
@@ -37,7 +43,11 @@ const FeaturesCard: React.FC<FeaturesCardProps> = ({ cards =[] }) => {
           <p className=" features_card_content text-center lg:text-left">
             {cardItem.cardContent}
           </p>
-          {cardItem?.linkText && <TextButton endIcon={true}>{cardItem?.linkText}</TextButton>}
+          {cardItem?.linkText && (
+            <TextButton endIcon={true} onClick={cardItem.gotoWhere}>
+              {cardItem?.linkText}
+            </TextButton>
+          )}
         </div>
       ))}
     </div>

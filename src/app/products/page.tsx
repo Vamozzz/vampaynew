@@ -1,13 +1,16 @@
 import Functionality from "@/components/functionality/functionality";
 import HeroAllSection from "@/components/heroAll/heroAllSection";
 import CustomizedMenus from "@/components/menu/menu";
-import { Feature1, heroAboutUs, heroBlogsPage, heroCollection, heroContactUs, heroDeveloperApi, heroFaq, heroPayout, heroPricing } from "@/constants/features";
+import { Feature1, heroAboutUs, heroBlogsPage, heroCollection, heroContactUs, heroDeveloperApi, heroFaq, heroPayout, heroPricing, stripFeaturesPayout1 } from "@/constants/features";
 import React from "react";
+import RootLayout from "../layout";
+import StripFeature from "@/components/stripFeatures/stripFeatures";
 
 function Page() {
   return (
     <div>
       <HeroAllSection heroContent={heroPayout} />
+      <StripFeature stripitems={stripFeaturesPayout1} />
       <CustomizedMenus />
       {/* <HeroAllSection heroContent={heroPricing} /> */}
       {/* <HeroAllSection heroContent={heroCollection} /> */}

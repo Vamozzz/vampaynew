@@ -29,19 +29,19 @@ const PricingComponent = () => {
       },
     ],
   };
-//   onMouseOver={()=>setChangeBg(false)} onMouseOut={()=>setChangeBg(true)}
+  //   onMouseOver={()=>setChangeBg(false)} onMouseOut={()=>setChangeBg(true)}
   return (
     <section className="flex flex-col justify-around  py-20  gap-10 items-center ">
       <div className="lg:w-1/2">
         <p className="features_title">{data.title}</p>
       </div>
-      <div className="flex flex-col lg:flex-row gap-20 lg:gap-6  " >
+      <div className="flex flex-col lg:flex-row gap-20 lg:gap-6  ">
         {data.cardData.map((card, index) => (
           <div
             key={index}
             className="flex flex-col rounded-2xl gap-10 justify-center items-center py-8 px-4 lg:px-16 "
             style={{
-              background:  "linear-gradient(to right, #A5ADFF, #ECCAFF)"  
+              background: "linear-gradient(to right, #A5ADFF, #ECCAFF)",
             }}
           >
             <p className="button_Font">{card.type}</p>

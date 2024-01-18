@@ -22,7 +22,7 @@ interface FeaturesComponentProps {
 
 const FeaturesComponent: React.FC<FeaturesComponentProps> = ({ feature }) => {
   return (
-    <div className="flex flex-col justify-center items-center py-10 lg:py-20 gap-10">
+    <div className="flex flex-col justify-center items-center py-10 lg:py-10 bg-red-50 gap-10">
       <div className="">
         <p className="features_title">{feature?.title1}</p>
         <p className="features_title">{feature?.title2}</p>

@@ -3,27 +3,30 @@ import CustomButton from "../customButton/customButton";
 import Image from "next/image";
 import TextButton from "../customButton/textButton";
 import UserBrands from "../userBrands/userBrands";
+import { handleLogin } from "@/utils/customFunctions";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="pt-16">
-      <div className=" flex flex-col justify-between w-full lg:pl-20 gap-10 lg:gap-6 lg:flex lg:flex-row  pt-10 ">
+    <section className="">
         <div className="hero__image-overlay" />
-        <div className="flex flex-col gap-8 my-2  md:w-1/2 md:gap-8 ">
-          <div className="hero__title">
+
+      <div className=" flex flex-col justify-center items-center w-full lg:flex-row mt-10 lg:pl-20 h-[100vh] lg:h-[100vh] "> 
+      {/* lg:pl-20 gap-10 lg:gap-6 lg:flex lg:flex-row  pt-10  */}
+        <div className="flex flex-col justify-center gap-10  lg:w-1/2 items-center  lg:items-start  ">
+          <div className="hero__title ">
             <p>Your one stop,</p>
             <p>Integrated Payment</p>
-            <span>
-              {" "}
+             
               <p>solution</p>
               <Image
                 src={heroSection?.lineImage}
                 alt="logo"
                 width={150}
                 height={40}
-                className="mx-auto lg:w-auto md:mx-0"
+                className="mx-auto md:w-auto lg:mx-0 align-middle"
               />
-            </span>
+            
           </div>
           <div className="px-2">
             <p className="hero__subtitle">
@@ -38,28 +41,31 @@ const Hero = () => {
           </p>
           <p className="hero__subtitle">payment solution.</p> */}
           </div>
-          <div className="my-1 ">
+          <div className="my-1">
             <div className=" flex justify-center gap-3 md:justify-start">
-              <CustomButton filled={true} buttonMedium={true}>
+              <CustomButton onClick={handleLogin} filled={true} buttonMedium={true}>
                 login
               </CustomButton>
-              <TextButton endIcon={true}>Our features</TextButton>
+              <TextButton endIcon={true}>
+                <Link href={"/products/collection"}>Our features</Link>
+                </TextButton>
             </div>
           </div>
         </div>
-        <div className=" w-auto md:w-1/2 ">
+        <div className=" lg::w-1/2  ">
           <Image
             src={heroSection?.heroImage}
             alt="logo"
-            width={100}
-            height={100}
-            className="w-auto"
+            width={80}
+            height={80}
+            // className="w-auto"
+            layout="responsive"
           />
         </div>
       </div>
-      <div className="py-4">
+      {/* <div className="py-4">
       <UserBrands />
-      </div>
+      </div> */}
     </section>
   );
 };
