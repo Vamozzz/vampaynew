@@ -31,7 +31,7 @@ const TextButton: React.FC<textButtonProps> = ({
         ) : null
       }
     >
-      {children}
+      <p>{children}</p>
     </Button>
   );
 };

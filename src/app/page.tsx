@@ -45,7 +45,7 @@ export default function Home() {
       <Functionality {...Feature5} />
       <Functionality {...Feature6} />
       <IndustrySwiper />
-      <Article />
+      {/* <Article /> */}
       {/* <HeroAllSection /> */}
       {/* <Footer /> */}
       {/* <SwiperComponent /> */}

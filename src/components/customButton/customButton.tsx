@@ -29,6 +29,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       endIcon={endIcon ? <ArrowForwardIosIcon style={{color:'white', fontSize:'12px', 
 
     }} /> :null}
+    className="py-[10px] px-[18px] xs:py-[12px] xs:px-[20px] sm:py-[16px] sm:px-[28px] md:py-[16px] md:px-[28px] lg:py-[12px] lg:px-[20px] 2xl:py-[14px] 2xl:px-[24px] "
     >
       {children}
     </Button>

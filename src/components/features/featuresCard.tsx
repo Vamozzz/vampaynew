@@ -43,11 +43,13 @@ const FeaturesCard: React.FC<FeaturesCardProps> = ({ cards = [] }) => {
           <p className=" features_card_content text-center lg:text-left">
             {cardItem.cardContent}
           </p>
-          {cardItem?.linkText && (
-            <TextButton endIcon={true} onClick={cardItem.gotoWhere}>
-              {cardItem?.linkText}
-            </TextButton>
-          )}
+          <div className="read_more" >
+            {cardItem?.linkText && (
+              <TextButton endIcon={true} onClick={cardItem.gotoWhere}>
+                {cardItem?.linkText}
+              </TextButton>
+            )}
+          </div>
         </div>
       ))}
     </div>

@@ -28,10 +28,11 @@ const Hero = () => {
               />
             
           </div>
-          <div className="px-2">
+          <div className="px-10 ">
             <p className="hero__subtitle">
-              Simplify transactions, streamline payments, where integration
-              meets ease, making it your all-in-one payment solution.
+              Simplify transactions, streamline 
+              payments, where integration meets ease,
+              making it your all-in-one payment solution.
             </p>
             {/* <p className="hero__subtitle">
             Simplify transactions, streamline payments, where

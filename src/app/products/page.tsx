@@ -10,7 +10,7 @@ function Page() {
   return (
     <div>
       <HeroAllSection heroContent={heroPayout} />
-      <StripFeature stripitems={stripFeaturesPayout1} />
+      
       <CustomizedMenus />
       {/* <HeroAllSection heroContent={heroPricing} /> */}
       {/* <HeroAllSection heroContent={heroCollection} /> */}

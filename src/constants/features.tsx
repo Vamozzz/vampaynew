@@ -203,7 +203,7 @@ export const FeaturesWithLink1 = {
       linkValue: "https:www.google.com",
     },
     {
-      cardImage: "/rocket.svg",
+      cardImage: "/Optimal_Efficiency.svg",
       cardTitle: "Optimal Efficiency",
       cardContent:
         "Vampay's payment solutions adapt to your service needs, ensuring maximum ease and efficiency.",
@@ -211,7 +211,7 @@ export const FeaturesWithLink1 = {
       linkValue: "https:www.google.com",
     },
     {
-      cardImage: "/documents.svg",
+      cardImage: "/SeamlessTransactions.svg",
       cardTitle: "Seamless Transactions",
       cardContent:
         "Payment solutions match your service requirements for seamless financial operations.",
