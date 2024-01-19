@@ -13,6 +13,7 @@ import {
   FeatureCollection2,
   FeatureCollection3,
   FeaturesWithLink1,
+  FeaturesWithLink3,
   FeaturesWithLinkCollection1,
   blockCollection1,
   heroCollection,
@@ -37,6 +38,8 @@ function Collection() {
      
       <Banner />
       <StripFeature stripitems={stripFeaturesCollection3} />
+      {/* <FeaturesComponent feature={FeaturesWithLink3} /> */}
+
       {/* <SlickerComponent cards={cards} /> */}
     </div>
   );

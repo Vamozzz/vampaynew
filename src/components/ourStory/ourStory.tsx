@@ -119,7 +119,7 @@ const OurStory: React.FC<StorySectionProps> = ({ title, imgLeft, para }) => {
       {!imgLeft && (
         <div className="lg:w-1/2">
           <Image
-            src="/image.svg"
+            src="/OURSTORYVAMPAYLOGO.svg"
             alt="Image"
             className="w-full h-auto rounded-lg"
             width={50}

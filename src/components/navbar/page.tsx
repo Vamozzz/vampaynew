@@ -4,11 +4,11 @@ import Link from "next/link";
 import CustomButton from "../customButton/customButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Divider, Menu, MenuItem } from "@mui/material";
 import { navigationItems } from "@/constants/features";
 import TemporaryDrawer from "../drawer/drawer";
-import { usePathname, useRouter } from "next/navigation";
+import {  usePathname, useRouter } from "next/navigation";
 import Logo from "@/assets/images/logo.svg";
 import collection from "@/assets/images/import.svg";
 import payout from "@/assets/images/export.svg";
@@ -17,7 +17,7 @@ import contactus from "@/assets/images/CONTACTUS.svg";
 import faqs from "@/assets/images/FAQs.svg";
 import blogs from "@/assets/images/BLOGS.svg";
 import { Padding } from "@mui/icons-material";
-import { handleLogin,handleRegister } from "@/utils/customFunctions";
+import { handleLogin, handleRegister } from "@/utils/customFunctions";
 
 interface NavigationItem {
   name: string;
@@ -29,9 +29,14 @@ const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorCollection, setAnchorCollection] = useState(null);
   const [activeItem, setActiveItem] = useState("Home");
-  const route = usePathname();
+  const router = usePathname();
 
-  console.log(route, "route");
+  // useEffect(() => {
+  //   const ourRoute = router.split("/");
+  //   setActiveItem(ourRoute[1]);
+  // }, [router]);
+
+  console.log(router, "route");
 
   const handleMenuMouseEnter = (event: any) => {
     setAnchorEl(event.currentTarget);
@@ -53,7 +58,6 @@ const Navbar = () => {
     setShowNav((value) => !value);
   };
 
-  
   const renderMenuItem = (item: NavigationItem) => {
     const { name, link } = item;
     if (name === "Products" || name === "Company") {
@@ -98,12 +102,12 @@ const Navbar = () => {
             ))} */}
 
             {menuItemsMap[name].map((menuItem, index) => (
-              <React.Fragment key={index}  >
+              <React.Fragment key={index}>
                 <MenuItem
                   component={Link}
                   href={menuItem.href}
                   onClick={handleClose}
-                  sx={{paddingTop:0,paddingBottom:0}}
+                  sx={{ paddingTop: 0, paddingBottom: 0 }}
                 >
                   <Image src={menuItem.img} alt={`.`} />
                   <p className="p-1">{menuItem.text}</p>
@@ -121,7 +125,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50">
-      <div className="flex justify-between lg:px-20 items-center h-[76px] lg:h-[80px] 2xl:h-[112px] p-3 bg-white drop-shadow-md ">
+      <div className="flex justify-between lg:px-20 items-center p-3 bg-white drop-shadow-md ">
         <div className="">
           <Image src={Logo} alt="logo" width={130} height={30} />
         </div>
@@ -134,7 +138,9 @@ const Navbar = () => {
             <div key={index} className="relative group cursor-pointer">
               <div
                 className={` ${
-                  activeItem === item.name ?  " text-primaryPurple font-medium" : "text-gray-700"
+                  activeItem === item.name
+                    ? " text-primaryPurple font-medium"
+                    : "text-gray-700"
                 }`}
                 onClick={() => setActiveItem(item.name)} // Set the active item on click
               >
@@ -144,6 +150,7 @@ const Navbar = () => {
             </div>
           ))}
         </div>
+
         <div className="flex space-x-4 justify-center items-center">
           <div className="hidden sm:flex  space-x-2 ">
             <CustomButton onClick={handleLogin}>login</CustomButton>

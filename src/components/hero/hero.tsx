@@ -11,7 +11,7 @@ const Hero = () => {
     <section className="">
         <div className="hero__image-overlay" />
 
-      <div className=" flex flex-col justify-center items-center w-full lg:flex-row mt-10 lg:pl-20 h-[100vh] lg:h-[100vh] "> 
+      <div className=" flex flex-col justify-center items-center w-full lg:flex-row gap-6 mt-10 lg:pl-20 h-[100vh] lg:h-[100vh] "> 
       {/* lg:pl-20 gap-10 lg:gap-6 lg:flex lg:flex-row  pt-10  */}
         <div className="flex flex-col justify-center gap-10  lg:w-1/2 items-center  lg:items-start  ">
           <div className="hero__title ">

@@ -200,15 +200,15 @@ export const FeaturesWithLink1 = {
       cardContent:
         "Customize your payment experience, finding answers effortlessly without extensive searches.",
       linkText: "read more",
-      linkValue: "https:www.google.com",
+      linkValue: "/products/collection",
     },
     {
-      cardImage: "/rocket.svg",
+      cardImage: "/Optimal_Efficiency.svg",
       cardTitle: "Optimal Efficiency",
       cardContent:
         "Vampay's payment solutions adapt to your service needs, ensuring maximum ease and efficiency.",
       linkText: "read more",
-      linkValue: "https:www.google.com",
+      linkValue: "/products/collection",
     },
     {
       cardImage: "/documents.svg",
@@ -216,7 +216,7 @@ export const FeaturesWithLink1 = {
       cardContent:
         "Payment solutions match your service requirements for seamless financial operations.",
       linkText: "read more",
-      linkValue: "https:www.google.com",
+      linkValue: "/products/collection",
     },
   ],
 };
@@ -248,6 +248,37 @@ export const FeaturesWithLink2 = {
         "Effortlessly connect software across platforms for a swift integration process.",
       linkText: "",
       linkValue: "",
+    },
+  ],
+};
+
+export const FeaturesWithLink3 = {
+  title1: "Explore our other Products",
+  title2: "",
+  cards: [
+    {
+      cardImage: "/SinglePayout.svg",
+      cardTitle: "Single Payout",
+      cardContent:
+        "A hassle-free solution for swift and secure fund disbursement. Experience simplicity and efficiency in just one click.Experience simplicity and efficiency in just one click.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+    {
+      cardImage: "/Bulkpayment.svg",
+      cardTitle: "Bulk payout",
+      cardContent:
+        "Effortlessly disburse funds to multiple recipients in a single, streamlined process. Simplify large-scale transactions for a seamless and time-saving experience.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+    {
+      cardImage: "/documents.svg",
+      cardTitle: "Scheduled payout",
+      cardContent:
+        "Take control of your financial timeline with Scheduled Payouts. Set it, forget it, and enjoy the convenience of automated, timely disbursements tailored to your preferences.",
+      linkText: "read more",
+      linkValue: "/products/collection",
     },
   ],
 };
@@ -778,7 +809,6 @@ export const stripFeaturesCollection1 = [
   },
 ];
 
-
 export const stripFeaturesCollection2 = [
   {
     icon: "/All_Cards_Accepted.svg",
@@ -793,7 +823,6 @@ export const stripFeaturesCollection2 = [
     text: "Multiple Payment Modes",
   },
 ];
-
 
 export const stripFeaturesCollection3 = [
   {
@@ -813,7 +842,6 @@ export const stripFeaturesCollection3 = [
     text: "Ultra secure",
   },
 ];
-
 
 export const stripFeaturesPayout1 = [
   {

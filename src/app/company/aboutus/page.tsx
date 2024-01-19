@@ -5,6 +5,7 @@ import HeroAllSection from "@/components/heroAll/heroAllSection";
 import OurStory from "@/components/ourStory/ourStory";
 import PricingComponent from "@/components/pricing/pricingComponent";
 import Stats from "@/components/stats/stats";
+import IndustrySwiper from "@/components/swiper/swiper";
 import { Feature1, Feature7, FeaturesWithLinkAboutUs1, heroAboutUs, heroPricing, storyData1, storyData2 } from "@/constants/features";
 import React from "react";
 
@@ -16,6 +17,7 @@ const Page = () => {
       <OurStory {...storyData1} />
       <OurStory {...storyData2} />
       <Stats />
+      <IndustrySwiper />
     </div>
   );
 }

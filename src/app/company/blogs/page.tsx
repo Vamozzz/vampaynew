@@ -1,4 +1,5 @@
 import RootLayout from "@/app/layout";
+import Article from "@/components/articles/articleComponent";
 import Functionality from "@/components/functionality/functionality";
 import HeroAllSection from "@/components/heroAll/heroAllSection";
 import PricingComponent from "@/components/pricing/pricingComponent";
@@ -11,6 +12,7 @@ const Page = () => {
       <HeroAllSection heroContent={heroBlogsPage} />
       {/* <PricingComponent />
       <Functionality {...Feature7} /> */}
+       <Article />
     </div>
   );
 }

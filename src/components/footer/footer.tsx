@@ -23,7 +23,7 @@ function Footer() {
     >
       <div className="flex flex-col lg:flex-row gap-10 py-10 px-5 lg:px-20 ">
         <div className=" flex lg:flex-1 flex-col   gap-4">
-          <Image src={Logo} width={139} height={38} alt="logo" />
+          <Image src={"/logo.svg"} width={139} height={38} alt="logo" />
           <p className="features_card_content" style={{ textAlign: "left" }}>
             Connect with us to discover easy payment solutions that make your
             transactions better. We’re dedicated to making things secure and
@@ -77,10 +77,10 @@ function Footer() {
             </div>
             <div className="flex flex-col">
               <p className="text-md mb-2">Legal</p>
-              <Link href="/" className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 ">
+              <Link href="/company/privacy" className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 ">
               Privacy Policy
               </Link>
-              <Link href="/" className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 ">
+              <Link href="/company/terms" className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 ">
               Terms and Conditions
               </Link>
               {/* <Link href="/" className="text-md md:block text-[#565758]">

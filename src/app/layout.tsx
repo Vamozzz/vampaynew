@@ -26,8 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <ThemedComponent mode={"light"}>
-        <body className={`${helvetica.variable} ${poppins.className} relative` }>
+        <body className={`${helvetica.variable} ${poppins.className} relative`}>
           <Navbar />
           {children}
           <ExploreComponent />
@@ -37,4 +40,3 @@ export default function RootLayout({
     </html>
   );
 }
-
