@@ -98,7 +98,7 @@ export const heroSection = {
   title: "Your one stop, Integrated Payment solution",
   subTitle:
     "Accounting is a more diverse profession stability of a long with huge Profitability than it is often given creditand.",
-  heroImage: "/dashboard.svg",
+  heroImage: "/vampayhome.svg",
   lineImage: "/Line1.svg",
 };
 
@@ -242,7 +242,7 @@ export const FeaturesWithLink2 = {
       linkValue: "",
     },
     {
-      cardImage: "/integrate.svg",
+      cardImage: "/Integrate.svg",
       cardTitle: "Integrate",
       cardContent:
         "Effortlessly connect software across platforms for a swift integration process.",
@@ -319,7 +319,7 @@ export const FeaturesWithLinkAboutUs1 = {
   title2: "Excellence",
   cards: [
     {
-      cardImage: "/mission.svg",
+      cardImage: "/Mission.svg",
       cardTitle: "Mission",
       cardContent:
         "To redefine financial experiences through cutting-edge technology, seamless transactions, and inclusive solutions that drive success for every entrepreneur and enterprise.",
@@ -327,7 +327,7 @@ export const FeaturesWithLinkAboutUs1 = {
       linkValue: "",
     },
     {
-      cardImage: "/vision.svg",
+      cardImage: "/Vision.svg",
       cardTitle: "Vision",
       cardContent:
         "Leading fintech innovation, we strive to revolutionize financial experiences globally through cutting-edge solutions, empowering businesses, and shaping the future of digital transactions.",
@@ -335,7 +335,7 @@ export const FeaturesWithLinkAboutUs1 = {
       linkValue: "",
     },
     {
-      cardImage: "/purpose.svg",
+      cardImage: "/Purpose.svg",
       cardTitle: "Purpose",
       cardContent:
         "Facilitating effortless financial transactions. Fostering growth through simplified payments. Empowering businesses to thrive in the digital era.",
@@ -494,7 +494,7 @@ export const Feature6 = {
   subHeader:
     "Unveiling Our Modern, User-Friendly API Banking Stack Engineered for Reliability and Scalability. Dive into the Details with Our Comprehensive Documentation for a Seamless Integration Experience!",
   imageSideLeft: false,
-  featureImage: "/apiintegration.svg",
+  featureImage: "/APIINTEGRATION.svg",
   buttonText: "Read the docs!",
 };
 
@@ -525,7 +525,7 @@ export const Feature8 = {
     "Explore the potential of our APIs and transform the digital landscape withyour innovative solutions",
 
   imageSideLeft: false,
-  featureImage: "/featuresImage.svg",
+  featureImage: "/APIINTEGRATION.svg",
   buttonText: "Developer Tool Kit",
 };
 
@@ -573,7 +573,7 @@ export const FeatureCollection2 = {
     },
   ],
   imageSideLeft: true,
-  featureImage: "/pos.svg",
+  featureImage: "/POS.svg",
   buttonText: "",
 };
 
@@ -594,7 +594,7 @@ export const FeatureCollection3 = {
     },
   ],
   imageSideLeft: false,
-  featureImage: "/qr.svg",
+  featureImage: "/QR.svg",
   buttonText: "",
 };
 

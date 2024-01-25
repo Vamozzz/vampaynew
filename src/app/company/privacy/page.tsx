@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
+
 
 const Privacy = () => {
   return (
@@ -291,6 +293,7 @@ const Privacy = () => {
           the Grievance Officer are provided below: e-mail : support@vampay.com
         </p>
       </div>
+      <ScrollToTopButton />
     </section>
   );
 };

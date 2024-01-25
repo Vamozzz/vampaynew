@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,7 +9,7 @@ import Image from "next/image";
 const images = [
   {
     name: "Education",
-    img: "/education.svg",
+    img: "/EDUCATION.svg",
   },
   {
     name: "Freelancer",
@@ -61,7 +61,23 @@ const IndustrySwiper = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
+    autoPlay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3.1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3.1,
+        },
+      },
+    ],
   };
 
   const goToPrev = () => {
@@ -71,6 +87,14 @@ const IndustrySwiper = () => {
   const goToNext = () => {
     sliderRef.current?.slickNext();
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      sliderRef.current?.slickNext();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="relative w-full overflow-hidden lg:px-20 p-5">
@@ -95,13 +119,13 @@ const IndustrySwiper = () => {
         ))}
       </Slider>
       <button
-        className="absolute  top-1/2 left-4 transform -translate-y-1/2 bg-primaryPurple p-2 rounded-full text-white"
+        className="absolute hidden lg:inline-block top-2/3 left-8 transform -translate-y-1/2 bg-primaryPurple p-2 rounded-full text-white"
         onClick={goToPrev}
       >
         &lt;
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-primaryPurple p-2 rounded-full text-white"
+        className="absolute hidden lg:inline-block top-2/3 right-8 transform -translate-y-1/2 bg-primaryPurple p-2 rounded-full text-white"
         onClick={goToNext}
       >
         &gt;

@@ -7,7 +7,7 @@ import CustomButton from "@/components/customButton/customButton";
 
 interface featurePoint {
   header: string;
-  spannedHeader?:string;
+  spannedHeader?: string;
   subHeader?: string;
   points?: Array<any>;
   imageSideLeft: boolean;
@@ -25,7 +25,6 @@ const Functionality = ({
   featureStyles,
   buttonText,
 }: featurePoint) => {
-
   const gradientTextStyle = {
     background: "linear-gradient(to bottom, #FF9DD3, #866AE8)",
     WebkitBackgroundClip: "text",
@@ -45,11 +44,30 @@ const Functionality = ({
             height={100}
             layout="responsive"
           />
+          {/* <object
+            aria-label="Admin panel display"
+            width={80}
+            height={80}
+            className="b3_gs w-full h-full "
+            type="image/svg+xml"
+            data="/homeTransform.svg"
+          ></object> */}
         </div>
       )}
       <div className="flex-col space-y-6 flex-1">
-        {header && <p className="features_title lg:text-left ">{header} <span style={gradientTextStyle} className="pl-1">{spannedHeader}</span> </p>}
-        {subHeader && <p className="features_card_content">{subHeader}</p>}
+        {header && (
+          <p className="features_title lg:text-left ">
+            {header}{" "}
+            <span style={gradientTextStyle} className="p-1">
+              {spannedHeader}
+            </span>{" "}
+          </p>
+        )}
+        {subHeader && (
+          <p className="features_card_content" style={{ textAlign: "left" }}>
+            {subHeader}
+          </p>
+        )}
         {points &&
           points.map((point, index) => (
             <div key={index}>
@@ -60,7 +78,12 @@ const Functionality = ({
                   width={20}
                   height={20}
                 />
-                <h3 className="features_card_more " style={{textAlign:"left"}}>{point.header}</h3>
+                <h3
+                  className="features_card_more "
+                  style={{ textAlign: "left" }}
+                >
+                  {point.header}
+                </h3>
               </div>
               {point.subHeader && (
                 <p

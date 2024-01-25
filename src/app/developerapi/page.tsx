@@ -5,6 +5,7 @@ import React from "react";
 import RootLayout from "../layout";
 import BlockInfo from "@/components/block/block";
 import StripFeature from "@/components/stripFeatures/stripFeatures";
+import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
 
 function Page() {
   return (
@@ -13,6 +14,7 @@ function Page() {
       <StripFeature stripitems={stripFeaturesDev1} />
       <BlockInfo {...blockDevApi1} />
       <Functionality {...Feature8} />
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -1,4 +1,3 @@
-const BASEURL = "http://localhost:3000/"
 
 export const handleLogin = () => {
   window.location.href = "https://vampay.in/Merchant/Login";
@@ -32,8 +31,6 @@ export const gotoTwitter = () => {
   window.location.href = "https://x.com/VampayInd?t=oPjKp_YWurnwpm7xHsI0xw&s=08";
 };
 
-export const gotoProducts = ()=>{
-    window.location.href = `${BASEURL}products/collection`;
-}
+
 
 

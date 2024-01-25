@@ -4,6 +4,7 @@ import BlockInfo from "@/components/block/block";
 import FeaturesComponent from "@/components/features/featuresComponent";
 import Functionality from "@/components/functionality/functionality";
 import HeroAllSection from "@/components/heroAll/heroAllSection";
+import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
 import SlickerComponent from "@/components/slicker/slickComponent";
 import StripFeature from "@/components/stripFeatures/stripFeatures";
 import ScrollableTabsButtonForce from "@/components/stripFeatures/stripFeatures";
@@ -41,6 +42,7 @@ function Collection() {
       {/* <FeaturesComponent feature={FeaturesWithLink3} /> */}
 
       {/* <SlickerComponent cards={cards} /> */}
+      <ScrollToTopButton />
     </div>
   );
 }

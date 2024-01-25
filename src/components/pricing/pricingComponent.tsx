@@ -14,7 +14,7 @@ const PricingComponent = () => {
           "Personalized Dashboard",
           "Flexible Pricing Structure",
           "API Integration",
-          "Advance Analytics and Reporting",
+          "Analytics and Reporting",
         ],
       },
       {
@@ -25,6 +25,7 @@ const PricingComponent = () => {
           "Flexible Pricing Structure",
           "API Integration",
           "Advance Analytics and Reporting",
+          "Dedicated Account Manager",
         ],
       },
     ],
@@ -45,9 +46,9 @@ const PricingComponent = () => {
             }}
           >
             <p className="button_Font">{card.type}</p>
-            <p>
-              <span className="features_title">{card.percent} </span> per month
-            </p>
+            {/* <p>
+              <span className="features_title">{card.percent} </span> per Transaction
+            </p> */}
             <div className="flex flex-col gap-4">
               {card.points.map((point, pointIndex) => (
                 <div key={pointIndex} className="flex ">

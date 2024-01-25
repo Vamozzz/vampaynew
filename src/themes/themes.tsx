@@ -10,7 +10,7 @@ const theme = createTheme({
     text: { primary: '#333333', secondary: '#666666' },
   },
   typography: {
-    fontFamily: 'Roboto, sans-serif',
+    fontFamily: 'Poppins,Roboto, sans-serif',
     h1: { fontSize: '2.5rem', fontWeight: 500 },
   },
 });

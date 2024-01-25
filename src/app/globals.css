@@ -48,6 +48,10 @@ body {
   /* absolute left-0 top-0 bg-hero-bg bg-repeat-round -z-10 w-full  h-[90%] overflow-hidden; */
 }
 
+.explore_title {
+  @apply text-[20px] font-medium leading-[30px] text-center text-black lg:text-[36px] lg:leading-[57px];
+}
+
 .hero__image {
   @apply w-20 h-20;
 }
@@ -57,7 +61,7 @@ body {
 /* button starts here */
 
 .button_Font {
-  @apply text-[14px] font-medium leading-[21px] text-center lg:text-[24px] lg:leading-[36px];
+  @apply text-[14px] font-medium leading-[21px] font-Poppins text-center lg:text-[24px] lg:leading-[36px];
 }
 
 /* button  ends here */
@@ -81,13 +85,13 @@ body {
 
 /* features end here */
 
-
 /* explore starts here  */
 
-.explore_title{
-@apply text-[20px] font-medium leading-[30px] text-center text-black lg:text-[36px] lg:leading-[57px]
-}
-
-
-
 /* explore ends here  */
+
+/* swiper  */
+
+.swiper_bg {
+  /* @apply bg-gradient-to-b from-swiperGradientStart to-swiperGradientEnd */
+  @apply bg-gradient-to-b from-rose-200 to-indigo-200;
+}

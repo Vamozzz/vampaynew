@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
+
 
 const Terms = () => {
   return (
@@ -379,6 +381,7 @@ const Terms = () => {
           of the Services.
         </p>
       </div>
+      <ScrollToTopButton />
     </section>
   );
 };

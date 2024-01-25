@@ -4,6 +4,7 @@ import ContactForm from "@/components/contactform/contact";
 import Functionality from "@/components/functionality/functionality";
 import HeroAllSection from "@/components/heroAll/heroAllSection";
 import PricingComponent from "@/components/pricing/pricingComponent";
+import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
 import ScrollableTabsButtonForce from "@/components/stripFeatures/stripFeatures";
 import {
   Feature1,
@@ -22,6 +23,7 @@ const Page = () => {
       <BasicAccordion accordionData={accordionData} />
       <ContactForm />
       {/* <ScrollableTabsButtonForce /> */}
+      <ScrollToTopButton />
     </div>
   );
 };

@@ -1,21 +1,21 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 interface CustomButtonProps {
   filled?: boolean;
   onClick?: () => void;
   children: React.ReactNode;
   buttonMedium?: boolean;
-  endIcon ?:boolean;
+  endIcon?: boolean;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
   filled = false,
   onClick,
   children,
-  buttonMedium =false,
-  endIcon=false,
+  buttonMedium = false,
+  endIcon = false,
 }) => {
   return (
     <Button
@@ -26,11 +26,13 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         color: filled ? "#fff" : "#333",
       }}
       onClick={onClick}
-      endIcon={endIcon ? <ArrowForwardIosIcon style={{color:'white', fontSize:'12px', 
-
-    }} /> :null}
+      endIcon={
+        endIcon ? (
+          <ArrowForwardIosIcon style={{ color: "white", fontSize: "12px" }} />
+        ) : null
+      }
     >
-      {children}
+      <p className="">{children}</p>
     </Button>
   );
 };

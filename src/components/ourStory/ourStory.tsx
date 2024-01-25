@@ -78,7 +78,6 @@
 
 // export default OurStory;
 
-
 import React from "react";
 import Image from "next/image";
 
@@ -90,15 +89,15 @@ interface StorySectionProps {
 
 const OurStory: React.FC<StorySectionProps> = ({ title, imgLeft, para }) => {
   return (
-    <section className="flex flex-col lg:flex-row lg:px-20 p-10 lg:w-full">
+    <section className="flex flex-col lg:flex-row gap-5 lg:px-20 p-10  lg:w-full">
       {imgLeft && (
         <div className="lg:w-1/2">
           <Image
-            src="/image.svg"
+            src="/our_story.png"
             alt="Image"
-            className="w-full h-auto rounded-lg"
-            width={50}
-            height={50}
+            className="w-full h-2/3 rounded-lg"
+            width={20}
+            height={20}
           />
         </div>
       )}
@@ -111,7 +110,12 @@ const OurStory: React.FC<StorySectionProps> = ({ title, imgLeft, para }) => {
         <div className="">
           {para.map((story, index) => (
             <div key={index}>
-              <p className="features_card_content p-4">{story.para1}</p>
+              <p
+                className="features_card_content p-2"
+                style={{ textAlign: "left" }}
+              >
+                {story.para1}
+              </p>
             </div>
           ))}
         </div>

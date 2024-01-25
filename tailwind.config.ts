@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       helvetica: ["var(--font-helvetica)", "Poppins"],
+      Poppins:["Poppins"]
     },
     extend: {
       screens: {
@@ -28,6 +29,8 @@ const config: Config = {
         grayBackground: "#F7F8FC",
         gradientStart: "#FFF0F9",
         gradientEnd: "#E8E7FE",
+        swiperGradientStart:"#FFD4EA",
+        swiperGradientEnd:"#B3AFFF",
       },
       backgroundImage: {
         "hero-bg": "url('/back-ground1.png')",

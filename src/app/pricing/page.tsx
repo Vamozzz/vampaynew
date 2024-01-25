@@ -4,6 +4,7 @@ import PricingComponent from "@/components/pricing/pricingComponent";
 import { Feature1, Feature7, heroPricing } from "@/constants/features";
 import React from "react";
 import RootLayout from "../layout";
+import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
 
 function Pricing() {
   return (
@@ -11,6 +12,7 @@ function Pricing() {
       <HeroAllSection heroContent={heroPricing} />
       <PricingComponent />
       <Functionality {...Feature7} />
+      <ScrollToTopButton />
     </div>
   );
 }
