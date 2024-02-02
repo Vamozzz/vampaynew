@@ -9,6 +9,7 @@ import {
   Feature6,
   FeaturesWithLink1,
   FeaturesWithLink2,
+  brands,
 } from "@/constants/features";
 import FeaturesComponent from "@/components/features/featuresComponent";
 import Functionality from "@/components/functionality/functionality";
@@ -17,12 +18,13 @@ import IndustrySwiper from "@/components/swiper/swiper";
 import Article from "@/components/articles/articleComponent";
 import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
 import SlickerComponent from "@/components/slicker/slickComponent";
+import UserBrands from "@/components/userBrands/userBrands";
 
 export default function Home() {
   return (
     <main className="">
       <Hero />
-      <SlickerComponent />
+      <UserBrands brandNames={brands} />
       <FeaturesComponent feature={FeaturesWithLink1} />
       <Functionality {...Feature1} />
       <Functionality {...Feature2} />

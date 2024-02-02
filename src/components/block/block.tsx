@@ -80,8 +80,8 @@ const BlockInfo: React.FC<BlockInfoProps> = ({ title, subTitle, blocks }) => {
       </div>
       <div className="flex flex-col lg:flex-row gap-10 p-6">
         {blocks.map((block, index) => (
-          <div key={index} className="bg-grayBackground p-4 shadow-md">
-            <div className="features_card_more">
+          <div key={index} className="lg:w-1/4 bg-grayBackground p-2 shadow-md">
+            <div className="features_card_more pb-2">
               <p className="text-center">{block.blockHeader}</p>
             </div>
             <div className="features_card_content">

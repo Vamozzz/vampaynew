@@ -12,8 +12,11 @@ interface featurePoint {
   points?: Array<any>;
   imageSideLeft: boolean;
   featureImage: string;
-  featureStyles?: object;
   buttonText?: string;
+}
+
+interface FunctionalityProps extends featurePoint {
+  externalStyle?: React.CSSProperties; // Import CSSProperties from react
 }
 const Functionality = ({
   header,
@@ -22,9 +25,9 @@ const Functionality = ({
   points,
   imageSideLeft,
   featureImage,
-  featureStyles,
+  externalStyle,
   buttonText,
-}: featurePoint) => {
+}: FunctionalityProps) => {
   const gradientTextStyle = {
     background: "linear-gradient(to bottom, #FF9DD3, #866AE8)",
     WebkitBackgroundClip: "text",
@@ -33,7 +36,7 @@ const Functionality = ({
   return (
     <div
       className="flex flex-col justify-between items-center px-4  gap-10 lg:flex-row lg:gap-8 lg:px-20 my-10 lg:my-10 "
-      style={{ ...featureStyles }}
+      style={externalStyle}
     >
       {imageSideLeft && (
         <div className=" bg-white flex-1">
@@ -56,7 +59,10 @@ const Functionality = ({
       )}
       <div className="flex-col space-y-6 flex-1">
         {header && (
-          <p className="features_title lg:text-left ">
+          <p
+            className="features_title lg:text-left "
+            style={{ textAlign: "left" }}
+          >
             {header}{" "}
             <span style={gradientTextStyle} className="p-1">
               {spannedHeader}

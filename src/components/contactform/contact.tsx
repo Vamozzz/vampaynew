@@ -1,4 +1,5 @@
 "use client";
+import { BorderColor } from "@mui/icons-material";
 import {
   FormControl,
   InputLabel,
@@ -169,7 +170,6 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="flex flex-col md:flex-row items-center">
-      {/* Image Section */}
       <div className="md:w-1/2 order-1 md:order-1">
         <Image
           src="/contact.svg"
@@ -180,11 +180,30 @@ const ContactForm: React.FC = () => {
         />
       </div>
 
-      {/* Form Section */}
       <div className="md:w-1/2 order-2 md:order-2 p-8 md:p-12">
-        <div className="flex justify-center items-center my-3">
-          <p className="features_card_header">{msgDelievered}</p>
-        </div>
+        {msgDelievered ? (
+          <div className="flex justify-center items-center my-3">
+            <p className="features_card_header mr-2">{msgDelievered}</p>
+            <Image
+              src={"/CheckMark.svg"}
+              alt="CheckMark"
+              height={20}
+              width={20}
+            />
+          </div>
+        ) : (
+          <>
+            <div className="flex justify-center lg:justify-start items-center my-3">
+              <p className="features_title">Connect With Our Team</p>
+            </div>
+            <div className="flex justify-center lg:justify-start items-center my-3">
+              <p className="features_card_content">
+                Our sales team always active to support you. Any kind of
+                questions about to our product they can answer to you.
+              </p>
+            </div>
+          </>
+        )}
         <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
           <div className="flex justify-between gap-2">
             <div className="mb-4">
@@ -198,7 +217,7 @@ const ContactForm: React.FC = () => {
                 type="text"
                 id="FirstName"
                 name="firstName"
-                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500"
+                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500 outline-none"
                 placeholder="First Name"
                 onChange={handleChange}
                 value={formData?.firstName}
@@ -216,7 +235,7 @@ const ContactForm: React.FC = () => {
                 type="text"
                 id="LastName"
                 name="lastName"
-                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500"
+                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500 outline-none"
                 placeholder="Last Name"
                 onChange={handleChange}
                 value={formData?.lastName}
@@ -237,7 +256,7 @@ const ContactForm: React.FC = () => {
                 type="Email"
                 id="Email"
                 name="email"
-                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500"
+                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500 outline-none"
                 placeholder="Email Address"
                 onChange={handleChange}
                 value={formData?.email}
@@ -255,7 +274,7 @@ const ContactForm: React.FC = () => {
                 type="text"
                 id="ContactNo"
                 name="contactNo"
-                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500"
+                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500 outline-none"
                 placeholder="Contact Number"
                 onChange={handleChange}
                 value={formData?.contactNo}
@@ -263,7 +282,7 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
           <FormControl fullWidth className="mb-2 focus:border-purple-500">
-            <InputLabel htmlFor="role" id="demo-simple-select-label">
+            <InputLabel htmlFor="role" id="demo-simple-select-label" className="focus:border-purple-500 outline-none">
               Inquiry
             </InputLabel>
             <Select
@@ -274,7 +293,7 @@ const ContactForm: React.FC = () => {
               label="Inquiry"
               onChange={handleSelectChange}
               // onChange={handleChange}
-              className="focus:border-purple-500"
+              className="focus:border-purple-500 outline-none"
             >
               <MenuItem value={"Select"}>Select</MenuItem>
               <MenuItem value={"Sales"}>Sales</MenuItem>
@@ -298,6 +317,8 @@ const ContactForm: React.FC = () => {
               placeholder="Your Message"
               onChange={handleTextareaChange}
               value={formData?.message}
+              style={{outline:"none"}}
+              // onFocus={{BorderColor:"purple"}}
             ></textarea>
           </div>
           <label

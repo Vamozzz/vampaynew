@@ -1,19 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-// interface Article {
-//   title: string;
-//   description: string;
-//   image: string;
-//   writerName: string;
-//   writerImage: string;
-//   time: number;
-// }
-
-// interface BlogData {
-//   title: string;
-// }
-
 interface BlogData {
   title: string;
   blogs: {
@@ -37,44 +24,11 @@ const gradientStyle = {
   borderTopLeftRadius: 10,
   borderTopRightRadius: 10,
 };
+const bgGradient = {
+  background: "linear-gradient(to right, #E8E2F4, #DDE5F8)",
+};
 
 const Article: React.FC = () => {
-  // const [articles, setArticles] = useState<Article[]>([]);
-
-  // useEffect(() => {
-  //   const fetchArticles = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         "https://backend.vaamozdevelop.xyz/Website/viewBlogs",
-  //         {
-  //           method: "GET",
-  //           headers: {
-  //             Token:
-  //               "caf2c3b95fb3894ae308323a1a9a8241040ff08ddbeffa86b508fedd9df57265",
-  //           },
-  //         }
-  //       );
-
-  //       if (!response.ok) {
-  //         throw new Error(`HTTP error! Status: ${response.status}`);
-  //       }
-
-  //       const data = await response.json();
-
-  //       if (data.status && data.data && data.data.all_blogs) {
-  //         const blogs: Article[] = data.data.all_blogs;
-  //         setArticles(blogs);
-  //       } else {
-  //         console.error("Invalid response structure:", data);
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching articles:", error);
-  //     }
-  //   };
-
-  //   fetchArticles();
-  // }, []);
-
   const blogData: BlogData = {
     title: "Our Latest Articles",
     blogs: [
@@ -88,22 +42,22 @@ const Article: React.FC = () => {
         time: "8",
       },
       {
-        title: "Unlocking Efficiency: The Offline Integration Revolution",
+        title: "Neobanking Redefined: Vampay's Yes Bank Partnership",
         description:
-          "Discover the simplicity of offline integration with Vampay. Revolutionize your payment processes with this game-changing feature...",
+          "Explore the future of banking with Vampay's collaboration with Yes Bank. A seamless and comprehensive financial experience awaits. vampay....",
         image: "/rafiki.svg",
         writerImage: "/blogger.svg",
         writerName: "Sanika Jadhav",
-        time: "8",
+        time: "4",
       },
       {
-        title: "Unlocking Efficiency: The Offline Integration Revolution",
+        title: "Tailored for Triumph: Vampay's Custom Solutions",
         description:
-          "Discover the simplicity of offline integration with Vampay. Revolutionize your payment processes with this game-changing feature...",
+          "Elevate your business with Vampay's customized solutions. From startups to enterprises, find the perfect fit for your payment needs....",
         image: "/rafiki.svg",
         writerImage: "/blogger.svg",
         writerName: "Sanika Jadhav",
-        time: "8",
+        time: "6",
       },
     ],
   };
@@ -113,34 +67,41 @@ const Article: React.FC = () => {
       <div className="features_title m-10">
         <p>{blogData.title}</p>
       </div>
-      <div className="m-auto flex flex-col gap-10 lg:flex-row flex-wrap justify-around">
+      <div className="flex flex-col md:flex-row gap-4">
         {blogData.blogs.map((item, index) => (
-          <div
-            key={index}
-            className="lg:w-1/4 flex flex-col justify-center bg-grayBackground rounded-b-lg"
-          >
-            <div className="relative" style={gradientStyle}>
+          <div key={index} className="">
+            <div
+              className="flex justify-start items-center"
+              style={gradientStyle}
+            >
               <Image
                 src={item.image}
                 alt="blog"
-                height={10}
-                width={10}
-                className="w-full"
+                height={300}
+                width={300}
+                className="object-cover"
+                // layout="responsive"
               />
             </div>
-            <div className="p-4 ">
-              <div className="features_card_header">
-                <p className="text-primaryPurple" style={{ textAlign: "left" }}>
-                  {item.title}
-                </p>
+            <div className=" flex flex-col  gap-4 rounded-b-lg " style={bgGradient}>
+              <div className="features_card_header flex flex-col  gap-2 p-3">
+                <button>
+                  <p
+                    className="text-primaryPurple"
+                    style={{ textAlign: "left" }}
+                  >
+                    {item.title}
+                  </p>
+                </button>
+
                 <p
                   className="features_card_content"
                   style={{ textAlign: "left" }}
                 >
-                  {item?.description}
+                  {item?.description.substring(0,100) +"..."}
                 </p>
               </div>
-              <div className="flex flex-row justify-between py-2 ">
+              <div className="flex flex-row justify-between p-2 bg-[#F7F8FD] rounded-b-lg">
                 <div className="flex flex-row justify-center items-center">
                   <Image
                     src={item.writerImage}
@@ -158,7 +119,7 @@ const Article: React.FC = () => {
                     height={20}
                     width={20}
                   />
-                  <p className="text-xs ">{item.time} mins read</p>
+                  <p className="text-xs text-center ">{item.time} mins read</p>
                 </div>
               </div>
             </div>

@@ -24,11 +24,12 @@ const HeroAllSection: React.FC<HeroAllSectionProps> = ({ heroContent }) => {
     color: "transparent",
   };
 
+
   return (
     <section
       className=""
-      style={{ background: "linear-gradient(to right, #A5ADFF, #ECCAFF)" }} 
-      // style={{ background: "linear-gradient(to bottom, #FFF0F9, #E8E6FD)" }}
+      // style={{ background: "linear-gradient(to right, #A5ADFF, #ECCAFF)" }} 
+      style={{ background: "linear-gradient(to bottom, #FFF0F9, #E8E6FD)" }}
     >
       {heroContent.map((item, index) => (
         <div
@@ -38,7 +39,7 @@ const HeroAllSection: React.FC<HeroAllSectionProps> = ({ heroContent }) => {
           <div className=" lg:w-5/6 flex flex-col items-center">
             <p className="hero__title" style={{ textAlign: "center" }}>
               {item.title1}
-              <span style={gradientTextStyle} className="pl-3">
+              <span style={gradientTextStyle} className="pl-3 p-1">
                 {item.spannedTitle}
               </span>{" "}
               {item.title2}

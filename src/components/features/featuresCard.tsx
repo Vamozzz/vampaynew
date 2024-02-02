@@ -89,7 +89,7 @@ const FeaturesCard: React.FC<FeaturesCardProps> = ({ cards = [] }) => {
   };
 
   return (
-    <div className="w-full  flex flex-wrap gap-2 lg:flex-nowrap  justify-around items-center">
+    <div className="w-full flex flex-wrap gap-2 lg:flex-nowrap  justify-around items-center">
       {cards.map((cardItem, index) => (
         <div
           key={index}

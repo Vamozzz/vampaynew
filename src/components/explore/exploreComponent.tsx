@@ -7,13 +7,13 @@ import Link from "next/link";
 
 const ExploreComponent = () => {
   const gradientStyle = {
-    background: "linear-gradient(to right, #A5ADFF, #ECCAFF)",
+    background: "linear-gradient(to right, #F8ECFF, #CDD1FF)",
   };
   return (
     <section className="p-10 lg:p-20">
       <div
         style={gradientStyle}
-        className="flex flex-col p-8 rounded-xl gap-4 lg:flex-row justify-center items-center"
+        className="flex flex-col p-8 rounded-xl gap-4 lg:flex-row justify-center items-center "
       >
         <div className="flex-1">
           <p className="explore_title lg:text-left">

@@ -109,7 +109,7 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
           className="mx-4  "
         >
           <ListItemButton
-            className="mb-1 shadow-md my-2 rounded-md "
+            className="mb-1  my-2 rounded-md "
             onClick={toggleDrawer}
           >
             <Image src={"/HOME.svg"} alt={`.`} width={20} height={20} />
@@ -117,9 +117,9 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
               <p className="ml-4">Home</p>
             </Link>
           </ListItemButton>
-          {/* <Divider className="mr-12" /> */}
+          <Divider className="mr-12" />
           <ListItemButton
-            className="mb-1 shadow-md my-2 rounded-md"
+            className="mb-1  my-2 rounded-md"
             onClick={handleClick}
           >
             <Image src={"/PRODUCT.svg"} alt={`.`} width={20} height={20} />
@@ -130,7 +130,7 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
             in={open}
             timeout="auto"
             unmountOnExit
-            className="shadow-sm shadow-primaryPurple-100 rounded-lg mt-2"
+            // className="shadow-sm shadow-primaryPurple-100 rounded-lg mt-2"
           >
             <List component="div" disablePadding>
               <ListItemButton  sx={{ pl: 4, }} onClick={toggleDrawer}>
@@ -139,7 +139,7 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
                 </ListItemIcon>
                 <Link href="/products/collection">Collection</Link>
               </ListItemButton>
-              {/* <Divider className="mx-10" /> */}
+              <Divider className="mx-10" />
               <ListItemButton sx={{ pl: 4 }} onClick={toggleDrawer}>
                 <ListItemIcon>
                   <Image src={payout} alt={`.`} />
@@ -148,9 +148,9 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
               </ListItemButton>
             </List>
           </Collapse>
-          {/* <Divider className="mr-12" /> */}
+          <Divider className="mr-12" />
           <ListItemButton
-            className="mb-1 shadow-md my-2 rounded-md"
+            className="mb-1  my-2 rounded-md"
             onClick={toggleDrawer}
           >
             <Image src={"/PRICING.svg"} alt={`.`} width={20} height={20} />
@@ -158,9 +158,9 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
               <p className="ml-4">Pricing</p>
             </Link>
           </ListItemButton>
-          {/* <Divider className="mr-12" /> */}
+          <Divider className="mr-12" />
           <ListItemButton
-            className="mb-1 shadow-md my-2 rounded-md"
+            className="mb-1  my-2 rounded-md"
             onClick={toggleDrawer}
           >
             <Image src={"/DEVAPI.svg"} alt={`.`} width={20} height={20} />
@@ -168,9 +168,9 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
               <p className="ml-4">Developer Api</p>
             </Link>
           </ListItemButton>
-          {/* <Divider className="mr-12" /> */}
+          <Divider className="mr-12" />
           <ListItemButton
-            className="mb-1 shadow-md my-2 rounded-md"
+            className="mb-1  my-2 rounded-md"
             onClick={handleClickCompany}
           >
             <Image src={"/COMPANY.svg"} alt={`.`} width={20} height={20} />
@@ -181,7 +181,7 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
             in={openCompany}
             timeout="auto"
             unmountOnExit
-            className="shadow-sm shadow-primaryPurple-100 rounded-lg mt-2"
+            // className="shadow-sm shadow-primaryPurple-100 rounded-lg mt-2"
           >
             <List component="div" disablePadding>
               <ListItemButton sx={{ pl: 4 }} onClick={toggleDrawer}>
@@ -190,18 +190,21 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
                 </ListItemIcon>
                 <Link href="/company/aboutus">About us</Link>
               </ListItemButton>
+              <Divider className="mx-10" />
               <ListItemButton sx={{ pl: 4 }} onClick={toggleDrawer}>
                 <ListItemIcon>
                   <Image src={contactus} alt={`.`} />
                 </ListItemIcon>
                 <Link href="/company/contactus">Contact Us</Link>
               </ListItemButton>
+              <Divider className="mx-10" />
               <ListItemButton sx={{ pl: 4 }} onClick={toggleDrawer}>
                 <ListItemIcon>
                   <Image src={blogs} alt={`.`} />
                 </ListItemIcon>
                 <Link href="/company/blogs">Blogs</Link>
               </ListItemButton>
+              <Divider className="mx-10" />
               <ListItemButton sx={{ pl: 4 }} onClick={toggleDrawer}>
                 <ListItemIcon>
                   <Image src={faqs} alt={`.`} />
@@ -210,7 +213,7 @@ const TemporaryDrawer: React.FC<DrawerProps> = ({ setShowNav, showNav }) => {
               </ListItemButton>
             </List>
           </Collapse>
-          {/* <Divider className="mr-12" /> */}
+          <Divider className="mr-12" />
         </List>
         <div className=" flex justify-center items-center gap-6 mt-20 pb-5">
           <CustomButton onClick={handleLogin}>login</CustomButton>

@@ -4,6 +4,7 @@ import Functionality from "@/components/functionality/functionality";
 import HeroAllSection from "@/components/heroAll/heroAllSection";
 import CustomizedMenus from "@/components/menu/menu";
 import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
+import SlickerComponent from "@/components/slicker/slickComponent";
 import StripFeature from "@/components/stripFeatures/stripFeatures";
 import {
   Feature1,
@@ -20,6 +21,7 @@ import {
   heroFaq,
   heroPayout,
   heroPricing,
+  sliderDataPayout1,
   stripFeaturesPayout1,
 } from "@/constants/features";
 import React from "react";
@@ -35,21 +37,7 @@ function Payouts() {
       <Functionality {...FeaturePayout2} />
       <Functionality {...FeaturePayout3} />
       <Functionality {...FeaturePayout4} />
-
-      {/* <CustomizedMenus /> */}
-      {/* <HeroAllSection heroContent={heroPricing} /> */}
-      {/* <HeroAllSection heroContent={heroCollection} /> */}
-
-      {/* <HeroAllSection heroContent={heroAboutUs} /> */}
-      {/* <HeroAllSection heroContent={heroContactUs} /> */}
-      {/* <HeroAllSection heroContent={heroBlogsPage} /> */}
-      {/* <HeroAllSection heroContent={heroFaq} /> */}
-      {/* <Functionality {...Feature1} /> */}
-      {/* <Functionality {...Feature2} />
-  <Functionality {...Feature3} />
-  <Functionality {...Feature4} />
-  <Functionality {...Feature5} />
-  <Functionality {...Feature6} /> */}
+      <SlickerComponent featuresData={sliderDataPayout1} />
       <ScrollToTopButton />
     </div>
   );

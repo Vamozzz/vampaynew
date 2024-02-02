@@ -5,9 +5,11 @@ import HeroAllSection from "@/components/heroAll/heroAllSection";
 import OurStory from "@/components/ourStory/ourStory";
 import PricingComponent from "@/components/pricing/pricingComponent";
 import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
+import SlickerComponent from "@/components/slicker/slickComponent";
 import Stats from "@/components/stats/stats";
 import IndustrySwiper from "@/components/swiper/swiper";
-import { Feature1, Feature7, FeaturesWithLinkAboutUs1, heroAboutUs, heroPricing, storyData1, storyData2 } from "@/constants/features";
+import UserBrands from "@/components/userBrands/userBrands";
+import { Feature1, Feature7, FeaturesWithLinkAboutUs1, brands, heroAboutUs, heroPricing, sliderDataPayout1, storyData1, storyData2 } from "@/constants/features";
 import React from "react";
 
 const Page = () => {
@@ -17,8 +19,10 @@ const Page = () => {
       <FeaturesComponent feature={FeaturesWithLinkAboutUs1} />
       <OurStory {...storyData1} />
       <OurStory {...storyData2} />
+      <UserBrands brandNames={brands} />
       <Stats />
       <IndustrySwiper />
+      <SlickerComponent featuresData={sliderDataPayout1}  />
       <ScrollToTopButton />
     </div>
   );

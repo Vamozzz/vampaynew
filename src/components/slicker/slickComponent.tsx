@@ -8,37 +8,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useRouter } from "next/navigation";
 
-const FeaturesWithLink1 = {
-  title1: "Explore our other Products",
-  cards: [
-    {
-      cardImage: "/demoImage.svg",
-      cardTitle: "Tailored solution",
-      cardContent:
-        "Customize your payment experience, finding answers effortlessly without extensive searches.",
-      linkText: "read more",
-      linkValue: "/products/collection",
-    },
-    {
-      cardImage: "/Optimal_Efficiency.svg",
-      cardTitle: "Optimal Efficiency",
-      cardContent:
-        "Vampay's payment solutions adapt to your service needs, ensuring maximum ease and efficiency.",
-      linkText: "read more",
-      linkValue: "/products/collection",
-    },
-    {
-      cardImage: "/documents.svg",
-      cardTitle: "Seamless Transactions",
-      cardContent:
-        "Payment solutions match your service requirements for seamless financial operations.",
-      linkText: "read more",
-      linkValue: "/products/collection",
-    },
-  ],
-};
+interface SlickerComponentProps {
+  featuresData: {
+    title1: string;
+    cards: {
+      cardImage: string;
+      cardTitle: string;
+      cardContent: string;
+      linkText: string;
+      linkValue: string;
+    }[];
+  };
+}
 
-const SlickerComponent: React.FC = () => {
+const SlickerComponent: React.FC<SlickerComponentProps> = ({
+  featuresData,
+}) => {
   const sliderRef = useRef<Slider>(null);
   const router = useRouter();
 
@@ -93,17 +78,17 @@ const SlickerComponent: React.FC = () => {
   return (
     <div className="relative w-full overflow-hidden lg:px-20 p-5">
       <div className="features_title p-10">
-        <p>{FeaturesWithLink1.title1}</p>
+        <p>{featuresData.title1}</p>
       </div>
       <Slider ref={sliderRef} {...sliderSettings}>
-        {FeaturesWithLink1.cards.map((cardItem, index) => (
+        {featuresData.cards.map((cardItem, index) => (
           <div
             key={index}
             className={`my-2  ${
-              index < FeaturesWithLink1.cards.length - 1 ? "lg:border-r" : ""
+              index < featuresData.cards.length - 1 ? "lg:border-r" : ""
             }`}
           >
-            <div className="flex flex-col justify-around gap-2 items-center p-2 ">
+            <div className="flex flex-col justify-around gap-2 items-center lg:items-start p-2 ">
               {" "}
               <div className="flex justify-center items-center lg:justify-start lg:items-start ">
                 <Image
@@ -133,13 +118,13 @@ const SlickerComponent: React.FC = () => {
         ))}
       </Slider>
       <button
-        className="absolute hidden lg:inline-block top-2/3 left-8 transform -translate-y-1/2 bg-primaryPurple p-2 rounded-full text-white"
+        className="absolute hidden lg:inline-block top-2/3 left-8 transform -translate-y-1/2 text-[28px] bg-grayBackground p-2 rounded-full text-black"
         onClick={goToPrev}
       >
         &lt;
       </button>
       <button
-        className="absolute  hidden lg:inline-block top-2/3 right-8 transform -translate-y-1/2 bg-primaryPurple p-2 rounded-full text-white"
+        className="absolute  hidden lg:inline-block top-2/3 right-8 transform -translate-y-1/2 text-[28px] bg-grayBackground  p-2 rounded-full text-black"
         onClick={goToNext}
       >
         &gt;

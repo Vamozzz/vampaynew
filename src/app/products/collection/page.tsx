@@ -18,6 +18,7 @@ import {
   FeaturesWithLinkCollection1,
   blockCollection1,
   heroCollection,
+  sliderDataCollection,
   stripFeaturesCollection1,
   stripFeaturesCollection2,
   stripFeaturesCollection3,
@@ -41,7 +42,7 @@ function Collection() {
       <StripFeature stripitems={stripFeaturesCollection3} />
       {/* <FeaturesComponent feature={FeaturesWithLink3} /> */}
 
-      {/* <SlickerComponent cards={cards} /> */}
+      <SlickerComponent featuresData={sliderDataCollection} />
       <ScrollToTopButton />
     </div>
   );

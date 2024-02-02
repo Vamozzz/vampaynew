@@ -44,7 +44,8 @@ body {
 }
 
 .hero__image-overlay {
-  @apply h-[100vh] w-full bg-gradient-to-b from-rose-200 to-indigo-200 absolute left-0 top-0 lg:bg-hero-bg bg-cover -z-10   overflow-hidden;
+  @apply h-[100vh] w-full bg-gradient-to-b from-[#FFF0F9] to-[#E8E6FD] absolute left-0 top-0 lg:bg-hero-bg bg-cover -z-10   overflow-hidden;
+  /* @apply h-[100vh] w-full bg-gradient-to-b from-rose-200 to-indigo-200 absolute left-0 top-0 lg:bg-hero-bg bg-cover -z-10   overflow-hidden; */
   /* absolute left-0 top-0 bg-hero-bg bg-repeat-round -z-10 w-full  h-[90%] overflow-hidden; */
 }
 
@@ -61,7 +62,7 @@ body {
 /* button starts here */
 
 .button_Font {
-  @apply text-[14px] font-medium leading-[21px] font-Poppins text-center lg:text-[24px] lg:leading-[36px];
+  @apply text-[14px] font-medium leading-[21px]  text-center lg:text-[24px] lg:leading-[36px];
 }
 
 /* button  ends here */

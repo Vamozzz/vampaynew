@@ -31,6 +31,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
           <ArrowForwardIosIcon style={{ color: "white", fontSize: "12px" }} />
         ) : null
       }
+      className="shadow-none"
     >
       <p className="">{children}</p>
     </Button>

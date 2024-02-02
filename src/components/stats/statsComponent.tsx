@@ -66,7 +66,7 @@ const StatsComponent = () => {
             }`}
           >
             <p className="font-semibold text-[48px] text-center">{item.num}</p>
-            <p className="font-medium text-[24] text-center ">{item.content}</p>
+            <p className="font-normal text-[24] text-center ">{item.content}</p>
           </div>
         ))}
       </div>

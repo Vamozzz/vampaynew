@@ -104,12 +104,11 @@ const Navbar = () => {
                   component={Link}
                   href={menuItem.href}
                   onClick={handleClose}
-                  sx={{ paddingTop: 0, paddingBottom: 0 }}
+                  sx={{ paddingTop: 1, paddingBottom: 1 }}
                 >
-                  <Image src={menuItem.img} alt={`.`} />
+                  <Image src={menuItem.img} alt={`.`} className="mr-2" />
                   <p className="p-1">{menuItem.text}</p>
                 </MenuItem>
-                <Divider />
               </React.Fragment>
             ))}
           </Menu>

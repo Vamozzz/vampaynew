@@ -28,7 +28,7 @@ function Footer() {
       style={{ background: "linear-gradient(to right, #E8E2F4, #DDE5F8)" }}
     >
       <div className="flex flex-col lg:flex-row gap-10 py-10 px-5 lg:px-20 ">
-        <div className=" flex lg:flex-1 flex-col   gap-4">
+        <div className=" flex lg:flex-1 flex-col gap-4">
           <button className="">
             <Link href={"/"}>
               <Image src={"/logo.svg"} width={139} height={38} alt="logo" />
@@ -40,12 +40,19 @@ function Footer() {
             Elevate your online business effortlessly by connecting with our
             dedicated team.
           </p>
-          <div className="flex flex-row justify-start gap-2 items-center">
-            <Image src={FooterPic1} width={100} height={38} alt="logo" />
-            <Image src={secured} width={100} height={38} alt="logo" />
+          <div className="flex flex-row justify-start gap-1 items-center">
+            <Image src={"/PCIDSS3.svg"} width={80} height={38} alt="logo" />
+            <Image src={"/SECURE3.svg"} width={80} height={38} alt="logo" />
+            <Image src={"/MAKEININDIA3.svg"} width={80} height={38} alt="logo" />
+            <Image
+              src={"/DIGITALINDIA3.svg"}
+              width={80}
+              height={38}
+              alt="logo"
+            />
           </div>
         </div>
-        <div className=" flex lg:flex-1 flex-col gap-5 lg:flex-row justify-around">
+        <div className=" flex lg:flex-2 flex-col gap-5 lg:flex-row justify-around">
           <div className=" flex flex-row gap-10">
             <div className="flex flex-col">
               <p className="text-md mb-2">Products</p>
@@ -129,7 +136,7 @@ function Footer() {
 
         <div className="flex flex-1 flex-col flex-wrap gap-2">
           <p className="text-md lg:text-center">Find us online</p>
-          <div className="flex justify-start lg:justify-center gap-2 ">
+          <div className="flex flex-wrap justify-start lg:justify-center gap-2 ">
             <Image
               src={linkedin}
               width={25}

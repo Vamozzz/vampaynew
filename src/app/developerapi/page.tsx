@@ -6,6 +6,7 @@ import RootLayout from "../layout";
 import BlockInfo from "@/components/block/block";
 import StripFeature from "@/components/stripFeatures/stripFeatures";
 import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
+import IndustrySwiper from "@/components/swiper/swiper";
 
 function Page() {
   return (
@@ -14,6 +15,7 @@ function Page() {
       <StripFeature stripitems={stripFeaturesDev1} />
       <BlockInfo {...blockDevApi1} />
       <Functionality {...Feature8} />
+      <IndustrySwiper />
       <ScrollToTopButton />
     </div>
   );

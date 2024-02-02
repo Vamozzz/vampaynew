@@ -58,7 +58,63 @@ export const accordionData = [
     content:
       "Our website provides documentation and support to help you easily integrate Vampay into your online store. Please visit https://vampay.in/Login.",
   },
+  {
+    id: 7,
+    heading: "Who do I contact if I have issues with a transaction?",
+    content:
+      "You can contact our dedicated support team through the provided contact information on our website for assistance with transaction issues. If the issue persists contact support@vampay.in.",
+  },
+  {
+    id: 8,
+    heading:
+      "Are payments PCI DSS compliant? (Payment Card Industry Data Security Standard)*",
+    content:
+      "Yes, Vampay is PCI DSS compliant, ensuring the security of payment card data.",
+  },
+  {
+    id: 9,
+    heading: "What fraud prevention measures does Vampay have in place?",
+    content:
+      "Vampay implements fraud prevention measures such as transaction monitoring and verification processes to protect users from fraudulent activities.",
+  },
+  {
+    id: 10,
+    heading: "What programming languages does your API support?",
+    content:
+      "Our API supports a variety of programming languages. You can find this information in our API documentation.",
+  },
+  {
+    id: 11,
+    heading: "How does your API handle payment failures?",
+    content:
+      "The Vampay API is designed to handle payment failures gracefully, and the documentation provides guidance on error handling.",
+  },
 ];
+
+export const brands: string[] = [
+  "yesbank3",
+  "mastercard3",
+  "icicibank3",
+  "idfc3",
+  "visa3",
+  "axisbaank3",
+  "rupay3",
+  "kotak3",
+  "upi3",
+  "aubank3",
+];
+
+// export const brands: string[] = [
+//   "union",
+//   "rbl",
+//   "icici",
+//   "idfcbank",
+//   "kotak",
+//   "sbibank",
+//   "hdfcbank",
+//   "visa",
+//   "axis",
+// ];
 
 export const storyData1 = {
   title: "Our Story",
@@ -384,12 +440,12 @@ export const Feature1 = {
     {
       header: "Connect all your bank accounts",
       subHeader:
-        "Connect your current accounts to Vampay to easily send and receive payments.",
+        "Link your current accounts to Vampay for easy payments, managing transactions effortlessly from a centralized hub.",
     },
     {
-      header: "Create bills and invoices",
+      header: "Transform your business with Vampay",
       subHeader:
-        "Generate bills and invoices effortlessly on Vampay or import seamlessly from preferred accounting software, streamlining your financial tasks.",
+        "Simply accept payments, streamline payouts, and seamlessly integrate APIs for an efficient and comprehensive payment experience.",
     },
     {
       header: "Automatic Reconciliation",
@@ -452,16 +508,13 @@ export const Feature4 = {
     "Enable quicker payments with multiple modes, settling directly into your bank account.",
   points: [
     {
-      header: "GST-compliant invoices with automated payables tracking",
+      header: "Automated Payables Tracking",
     },
     {
-      header: "Support for net banking, UPI, credit or debit cards",
+      header: "Diverse Payment Modes",
     },
     {
-      header: "Support for split payments or adjustments against credit notes",
-    },
-    {
-      header: "Option for instant settlement",
+      header: "Instant Settlement Option",
     },
   ],
   imageSideLeft: false,
@@ -486,16 +539,16 @@ export const Feature5 = {
   ],
   imageSideLeft: false,
   featureImage: "/mobilemockup.svg",
-  buttonText: "Download Now !",
+  buttonText: "Download Now",
 };
 
 export const Feature6 = {
   header: "Accelerate Faster with Vampay's Powerful API’s",
   subHeader:
     "Unveiling Our Modern, User-Friendly API Banking Stack Engineered for Reliability and Scalability. Dive into the Details with Our Comprehensive Documentation for a Seamless Integration Experience!",
-  imageSideLeft: false,
+  imageSideLeft: true,
   featureImage: "/APIINTEGRATION.svg",
-  buttonText: "Read the docs!",
+  buttonText: "Read the docs",
 };
 
 export const Feature7 = {
@@ -880,3 +933,93 @@ export const stripFeaturesDev1 = [
     text: "Dedicated Support",
   },
 ];
+
+export const sliderDataCollection = {
+  title1: "Explore our other Products",
+  cards: [
+    {
+      cardImage: "/singlepayouticon.svg",
+      cardTitle: "Single Payout",
+      cardContent:
+        "A hassle-free solution for swift and secure fund disbursement. Experience simplicity and efficiency in just one click.Experience simplicity and efficiency in just one click.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+    {
+      cardImage: "/BulkPayouticon.svg",
+      cardTitle: "Bulk payout",
+      cardContent:
+        "Effortlessly disburse funds to multiple recipients in a single, streamlined process. Simplify large-scale transactions for a seamless and time-saving experience.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+    {
+      cardImage: "/Scheduledpayouticon.svg",
+      cardTitle: "Scheduled payout",
+      cardContent:
+        "Take control of your financial timeline with Scheduled Payouts. Set it, forget it, and enjoy the convenience of automated, timely disbursements tailored to your preferences.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+  ],
+};
+
+export const sliderDataPayout1 = {
+  title1: "Explore our other solutions",
+  cards: [
+    {
+      cardImage: "/COLLECTIONLINKIcon.svg",
+      cardTitle: "Collection link",
+      cardContent:
+        "Instantly generate secure links for seamless transactions and efficient way to send and receive payments with just a click.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+    {
+      cardImage: "/posicon.svg",
+      cardTitle: "POS",
+      cardContent:
+        "Empower your business operations with cutting-edge technology for enhanced efficiency at the point of sale.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+    {
+      cardImage: "/CollectionQrIcon.svg",
+      cardTitle: "Collection QR",
+      cardContent:
+        "Lets users quickly find answersto their questions without having to search through muttiple sources.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+  ],
+};
+
+export const sliderDataAboutUs1 = {
+  title1: "Explore our other solutions",
+  cards: [
+    {
+      cardImage: "/demoImage.svg",
+      cardTitle: "Collection link",
+      cardContent:
+        "Lets users quickly find answersto their questions without having to search through muttiple sources.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+    {
+      cardImage: "/Optimal_Efficiency.svg",
+      cardTitle: "Bulk payout",
+      cardContent:
+        "Empower your business operations with cutting-edge technology for enhanced efficiency at the point of sale.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+    {
+      cardImage: "/documents.svg",
+      cardTitle: "Scheduled payout",
+      cardContent:
+        "Lets users quickly find answersto their questions without having to search through muttiple sources.",
+      linkText: "read more",
+      linkValue: "/products/collection",
+    },
+  ],
+};
