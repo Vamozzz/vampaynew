@@ -96,32 +96,37 @@ const Navbar = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleClose}
         >
-          <p className={`cursor-pointer `}>{name}</p>
+          <p className={`cursor-pointer text-[16px]`}>{name}</p>
           <Menu anchorEl={anchor} open={Boolean(anchor)} onClose={handleClose}>
             {menuItemsMap[name].map((menuItem, index) => (
-              <React.Fragment key={index}>
-                <MenuItem
-                  component={Link}
-                  href={menuItem.href}
-                  onClick={handleClose}
-                  sx={{ paddingTop: 1, paddingBottom: 1 }}
-                >
-                  <Image src={menuItem.img} alt={`.`} className="mr-2" />
-                  <p className="p-1">{menuItem.text}</p>
-                </MenuItem>
-              </React.Fragment>
+              // <React.Fragment key={index}>
+              <MenuItem
+                key={index}
+                component={Link}
+                href={menuItem.href}
+                onClick={handleClose}
+                sx={{ paddingTop: 1, paddingBottom: 1 }}
+              >
+                <Image src={menuItem.img} alt={`.`} className="mr-2" />
+                <p className="p-1 text-[16px]">{menuItem.text}</p>
+              </MenuItem>
+              // </React.Fragment>
             ))}
           </Menu>
         </div>
       );
     } else {
-      return <Link href={link}>{name}</Link>;
+      return (
+        <Link href={link}>
+          <p className="text-[16px]">{name}</p>
+        </Link>
+      );
     }
   };
 
   return (
     <nav className="fixed top-0 w-full z-50">
-      <div className="flex justify-between lg:px-20 items-center p-3 bg-white drop-shadow-md ">
+      <div className="flex justify-between lg:px-20 items-center p-5 bg-white drop-shadow-md ">
         <button className="">
           <Link href={"/"}>
             <Image src={Logo} alt="logo" width={130} height={30} />{" "}

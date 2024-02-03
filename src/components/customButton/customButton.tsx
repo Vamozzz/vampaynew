@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import Button from "@mui/material/Button";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
@@ -8,6 +8,8 @@ interface CustomButtonProps {
   children: React.ReactNode;
   buttonMedium?: boolean;
   endIcon?: boolean;
+  customStyles?: CSSProperties;
+  endIconColor?: string | { endIconColor: string };
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -16,6 +18,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   children,
   buttonMedium = false,
   endIcon = false,
+  customStyles,
+  endIconColor,
 }) => {
   return (
     <Button
@@ -24,16 +28,25 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       style={{
         backgroundColor: filled ? "#6C54FF" : "transparent",
         color: filled ? "#fff" : "#333",
+        ...customStyles,
       }}
       onClick={onClick}
       endIcon={
         endIcon ? (
-          <ArrowForwardIosIcon style={{ color: "white", fontSize: "12px" }} />
+          <ArrowForwardIosIcon
+            style={{
+              color:
+                typeof endIconColor === "string"
+                  ? endIconColor
+                  : endIconColor?.endIconColor || "white",
+              fontSize: "12px",
+            }}
+          />
         ) : null
       }
       className="shadow-none"
     >
-      <p className="">{children}</p>
+      <p className={`p-2 text-[16px] ${!filled ? "px-6" : null}`}>{children}</p>
     </Button>
   );
 };

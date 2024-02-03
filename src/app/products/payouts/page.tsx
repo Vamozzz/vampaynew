@@ -34,9 +34,23 @@ function Payouts() {
       <StripFeature stripitems={stripFeaturesPayout1} />
       <BlockInfo {...blockPayout1} />
       <Functionality {...FeaturePayout1} />
-      <Functionality {...FeaturePayout2} />
+      <Functionality
+        {...FeaturePayout2}
+        externalStyle={{
+          backgroundColor: "#F7F8FD",
+          paddingBottom: 60,
+          paddingTop: 60,
+        }}
+      />
       <Functionality {...FeaturePayout3} />
-      <Functionality {...FeaturePayout4} />
+      <Functionality
+        {...FeaturePayout4}
+        externalStyle={{
+          backgroundColor: "#F7F8FD",
+          paddingBottom: 60,
+          paddingTop: 60,
+        }}
+      />
       <SlickerComponent featuresData={sliderDataPayout1} />
       <ScrollToTopButton />
     </div>

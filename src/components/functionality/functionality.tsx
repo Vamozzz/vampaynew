@@ -18,6 +18,7 @@ interface featurePoint {
 interface FunctionalityProps extends featurePoint {
   externalStyle?: React.CSSProperties; // Import CSSProperties from react
 }
+
 const Functionality = ({
   header,
   spannedHeader,
@@ -39,13 +40,14 @@ const Functionality = ({
       style={externalStyle}
     >
       {imageSideLeft && (
-        <div className=" bg-white flex-1">
+        <div className="flex flex-1 justify-center">
           <Image
             src={featureImage}
             alt="image"
-            width={100}
-            height={100}
-            layout="responsive"
+            width={500}
+            height={500}
+            // layout="responsive"
+            // className="bg-transparent"
           />
           {/* <object
             aria-label="Admin panel display"
@@ -57,7 +59,7 @@ const Functionality = ({
           ></object> */}
         </div>
       )}
-      <div className="flex-col space-y-6 flex-1">
+      <div className="flex flex-col space-y-6 flex-1">
         {header && (
           <p
             className="features_title lg:text-left "
@@ -111,13 +113,13 @@ const Functionality = ({
         )}
       </div>
       {!imageSideLeft && (
-        <div className=" bg-white flex-1 ">
+        <div className="flex flex-1 justify-center">
           <Image
             src={featureImage}
             alt="image"
-            width={100}
-            height={100}
-            layout="responsive"
+            width={500}
+            height={500}
+            // layout="responsive"
             // fill
           />
         </div>

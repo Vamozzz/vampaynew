@@ -82,17 +82,14 @@ const SlickerComponent: React.FC<SlickerComponentProps> = ({
       </div>
       <Slider ref={sliderRef} {...sliderSettings}>
         {featuresData.cards.map((cardItem, index) => (
-          <div
-            key={index}
-            className={`my-2  ${
+          <div key={index} className={`py-2 `}>
+            {/* ${
               index < featuresData.cards.length - 1 ? "lg:border-r" : ""
-            }`}
-          >
-            <div className="flex flex-col justify-around gap-2 items-center lg:items-start p-2 ">
-              {" "}
+            } */}
+            <div className="flex flex-col justify-between gap-4 mx-2 items-center lg:items-start p-4 shadow-md ">
               <div className="flex justify-center items-center lg:justify-start lg:items-start ">
                 <Image
-                  src={cardItem.cardImage}
+                  src={cardItem.cardImage} 
                   alt={"image"}
                   width={100}
                   height={100}

@@ -87,29 +87,41 @@ interface StorySectionProps {
   para: { para1: string }[];
 }
 
-const OurStory: React.FC<StorySectionProps> = ({ title, imgLeft, para }) => {
+interface FunctionalityProps extends StorySectionProps {
+  externalStyle?: React.CSSProperties;
+}
+
+const OurStory: React.FC<FunctionalityProps> = ({
+  title,
+  imgLeft,
+  para,
+  externalStyle,
+}) => {
   return (
-    <section className="flex flex-col lg:flex-row gap-5 lg:px-20 p-10  lg:w-full">
+    <section
+      className="flex flex-col justify-center items-center lg:flex-row gap-5 lg:px-20 p-10  lg:w-full"
+      style={externalStyle}
+    >
       {imgLeft && (
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 flex justify-center items-center">
           <Image
             src="/our_story.png"
             alt="Image"
-            className="w-full h-2/3 rounded-lg"
-            width={20}
-            height={20}
+            className=" rounded-lg"
+            width={400}
+            height={100}
           />
         </div>
       )}
-      <div className="lg:w-1/2">
+      <div className="lg:w-1/2 flex flex-col gap-5 ">
         {title && (
           <div className="features_title">
-            <p>{title}</p>
+            <p className="lg:text-left">{title}</p>
           </div>
         )}
         <div className="">
           {para.map((story, index) => (
-            <div key={index}>
+            <div key={index} className="">
               <p
                 className="features_card_content p-2"
                 style={{ textAlign: "left" }}
@@ -121,13 +133,13 @@ const OurStory: React.FC<StorySectionProps> = ({ title, imgLeft, para }) => {
         </div>
       </div>
       {!imgLeft && (
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 flex justify-center items-center">
           <Image
             src="/OURSTORYVAMPAYLOGO.svg"
             alt="Image"
-            className="w-full h-auto rounded-lg"
-            width={50}
-            height={50}
+            className=" rounded-lg"
+            width={400}
+            height={100}
           />
         </div>
       )}

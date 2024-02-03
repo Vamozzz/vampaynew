@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 interface textButtonProps {
   filled?: boolean;
@@ -25,13 +25,9 @@ const TextButton: React.FC<textButtonProps> = ({
         color: "#000",
       }}
       onClick={onClick}
-      endIcon={
-        endIcon ? (
-          <ArrowForwardIcon  />
-        ) : null
-      }
+      endIcon={endIcon ? <ArrowForwardIcon /> : null}
     >
-      {children}
+      <p className="text-[16px] p-2">{children}</p>
     </Button>
   );
 };

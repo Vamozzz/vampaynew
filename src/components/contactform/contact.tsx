@@ -8,7 +8,13 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import Image from "next/image";
-import React, { ChangeEvent, FormEvent, ReactNode, useState } from "react";
+import React, {
+  ChangeEvent,
+  FormEvent,
+  ReactNode,
+  useEffect,
+  useState,
+} from "react";
 
 interface FormData {
   firstName: string;
@@ -29,7 +35,16 @@ interface FormErrors {
   isagree?: string;
 }
 
-const ContactForm: React.FC = () => {
+interface FunctionalityProps {
+  externalStyle?: React.CSSProperties;
+  commentForm?: boolean;
+}
+
+const ContactForm: React.FC<FunctionalityProps> = ({
+  externalStyle,
+  commentForm,
+}) => {
+  const [isContactFormData, setContactFormData] = useState(true);
   const [agree, setAgree] = useState(false);
   const [msgDelievered, setMsgDelievered] = useState("");
   const [formData, setFormData] = useState<FormData>({
@@ -42,6 +57,12 @@ const ContactForm: React.FC = () => {
     role: "Select",
   });
   const [formErrors, setFormErrors] = useState<FormErrors>({});
+
+  useEffect(() => {
+    if (commentForm) {
+      setContactFormData(false);
+    }
+  }, [commentForm]);
 
   const handleTextareaChange: React.ChangeEventHandler<HTMLTextAreaElement> = (
     event
@@ -169,7 +190,10 @@ const ContactForm: React.FC = () => {
   // console.log(agree,"agree");
 
   return (
-    <div className="flex flex-col md:flex-row items-center">
+    <div
+      className="flex flex-col md:flex-row items-center"
+      style={externalStyle}
+    >
       <div className="md:w-1/2 order-1 md:order-1">
         <Image
           src="/contact.svg"
@@ -194,19 +218,26 @@ const ContactForm: React.FC = () => {
         ) : (
           <>
             <div className="flex justify-center lg:justify-start items-center my-3">
-              <p className="features_title">Connect With Our Team</p>
-            </div>
-            <div className="flex justify-center lg:justify-start items-center my-3">
-              <p className="features_card_content">
-                Our sales team always active to support you. Any kind of
-                questions about to our product they can answer to you.
+              <p className="features_title">
+                {isContactFormData
+                  ? "Connect With Our Team"
+                  : "Write a comment"}
               </p>
             </div>
+            {isContactFormData ? (
+              <div className="flex justify-center lg:justify-start items-center my-3">
+                <p className="features_card_content">
+                  Our sales team always active to support you. Any kind of
+                  questions about to our product they can answer to you.
+                </p>
+              </div>
+            ) : null}
           </>
         )}
-        <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
-          <div className="flex justify-between gap-2">
-            <div className="mb-4">
+        {/* max-w-md */}
+        <form className=" mx-auto" onSubmit={handleSubmit}>
+          <div className="flex justify-between gap-4">
+            <div className="mb-4 w-full">
               <label
                 htmlFor="FirstName"
                 className="block text-sm font-medium text-red-600"
@@ -224,7 +255,7 @@ const ContactForm: React.FC = () => {
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-4 w-full">
               <label
                 htmlFor="LastName"
                 className="block text-sm font-medium text-red-600"
@@ -243,8 +274,8 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex justify-between gap-2">
-            <div className="mb-4">
+          <div className="flex justify-between gap-4 ">
+            <div className="mb-4 w-full">
               <label
                 htmlFor="Email"
                 className="block text-sm font-medium text-red-600"
@@ -263,7 +294,7 @@ const ContactForm: React.FC = () => {
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-4 w-full">
               <label
                 htmlFor="ContactNo"
                 className="block text-sm font-medium text-red-600"
@@ -281,27 +312,58 @@ const ContactForm: React.FC = () => {
               />
             </div>
           </div>
-          <FormControl fullWidth className="mb-2 focus:border-purple-500">
-            <InputLabel htmlFor="role" id="demo-simple-select-label" className="focus:border-purple-500 outline-none">
-              Inquiry
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="role"
-              name="role"
-              value={formData.role}
-              label="Inquiry"
-              onChange={handleSelectChange}
-              // onChange={handleChange}
-              className="focus:border-purple-500 outline-none"
+          {isContactFormData ? (
+            <FormControl
+              fullWidth
+              className="mb-2 focus:border focus:border-purple-500"
             >
-              <MenuItem value={"Select"}>Select</MenuItem>
-              <MenuItem value={"Sales"}>Sales</MenuItem>
-              <MenuItem value={"Support"}>Support</MenuItem>
-              <MenuItem value={"fraud Related"}>Fraud Related</MenuItem>
-              <MenuItem value={"Refunds"}>Refunds</MenuItem>
-            </Select>
-          </FormControl>
+              <InputLabel htmlFor="role" id="demo-simple-select-label">
+                Inquiry
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="role"
+                name="role"
+                value={formData.role}
+                label="Inquiry"
+                onChange={handleSelectChange}
+                // onChange={handleChange}
+                // onFocus={(e) => (e.target.style.borderColor = "red")}
+              >
+                <MenuItem value={"Select"}>Select</MenuItem>
+                <MenuItem value={"Sales"}>Sales</MenuItem>
+                <MenuItem value={"Support"}>Support</MenuItem>
+                <MenuItem value={"fraud Related"}>Fraud Related</MenuItem>
+                <MenuItem value={"Refunds"}>Refunds</MenuItem>
+              </Select>
+              {/* <InputLabel
+                htmlFor="role"
+                id="demo-simple-select-label"
+                style={{ outline: "none" }}
+              >
+                Inquiry
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="role"
+                name="role"
+                value={formData.role}
+                label="Inquiry"
+                onChange={handleSelectChange}
+                style={{
+                  outline: "none",
+                  borderColor: "transparent",
+                  focus: "border-purple-500",
+                }}
+              >
+                <MenuItem value={"Select"}>Select</MenuItem>
+                <MenuItem value={"Sales"}>Sales</MenuItem>
+                <MenuItem value={"Support"}>Support</MenuItem>
+                <MenuItem value={"fraud Related"}>Fraud Related</MenuItem>
+                <MenuItem value={"Refunds"}>Refunds</MenuItem>
+              </Select> */}
+            </FormControl>
+          ) : null}
           <div className="mb-4">
             <label
               htmlFor="Message"
@@ -313,11 +375,11 @@ const ContactForm: React.FC = () => {
               id="Message"
               name="message"
               rows={4}
-              className="mt-1 p-2 w-full border rounded-md"
+              className="mt-1 p-2 w-full border rounded-md focus:border focus:border-purple-500"
               placeholder="Your Message"
               onChange={handleTextareaChange}
               value={formData?.message}
-              style={{outline:"none"}}
+              style={{ outline: "none" }}
               // onFocus={{BorderColor:"purple"}}
             ></textarea>
           </div>
@@ -328,18 +390,19 @@ const ContactForm: React.FC = () => {
             {formErrors.isagree}
           </label>
           <div className="mb-4">
-            <label className="flex items-center">
+            <label className="flex items-start">
               <input
                 type="checkbox"
                 name="agree"
-                className="mr-2"
+                className="mr-2 mt-1"
                 onChange={(e) => {
                   setAgree(e.target.checked);
                 }}
               />
               <span className="text-sm text-gray-600">
-                I agree that Vampay may contact me at the email address or phone
-                number above.
+                {isContactFormData
+                  ? "I agree that Vampay may contact me at the email address or phone number above."
+                  : "Save my name, email, and website in this browser for the next time I comment."}
               </span>
             </label>
           </div>
@@ -347,9 +410,9 @@ const ContactForm: React.FC = () => {
           <button
             type="submit"
             // disabled={!agree}
-            className="bg-primaryPurple text-white px-4 py-2 rounded-md hover:bg-primaryPurple-100 focus:outline-none focus:ring focus:border-blue-300"
+            className="bg-primaryPurple text-white px-4 py-2 my-2 rounded-md hover:bg-primaryPurple-100 focus:outline-none focus:ring focus:border-blue-300"
           >
-            Submit
+            {isContactFormData ? "Submit" : "Post Comment "}
           </button>
         </form>
       </div>

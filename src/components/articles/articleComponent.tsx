@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface BlogData {
   title: string;
   blogs: {
+    id: number;
     title: string;
     description: string;
     image: string;
@@ -33,6 +35,7 @@ const Article: React.FC = () => {
     title: "Our Latest Articles",
     blogs: [
       {
+        id: 1,
         title: "Unlocking Efficiency: The Offline Integration Revolution",
         description:
           "Discover the simplicity of offline integration with Vampay. Revolutionize your payment processes with this game-changing feature...",
@@ -42,6 +45,7 @@ const Article: React.FC = () => {
         time: "8",
       },
       {
+        id: 2,
         title: "Neobanking Redefined: Vampay's Yes Bank Partnership",
         description:
           "Explore the future of banking with Vampay's collaboration with Yes Bank. A seamless and comprehensive financial experience awaits. vampay....",
@@ -51,6 +55,7 @@ const Article: React.FC = () => {
         time: "4",
       },
       {
+        id: 3,
         title: "Tailored for Triumph: Vampay's Custom Solutions",
         description:
           "Elevate your business with Vampay's customized solutions. From startups to enterprises, find the perfect fit for your payment needs....",
@@ -69,39 +74,44 @@ const Article: React.FC = () => {
       </div>
       <div className="flex flex-col md:flex-row gap-4">
         {blogData.blogs.map((item, index) => (
-          <div key={index} className="">
+          <div key={index} className="rounded-lg">
             <div
-              className="flex justify-start items-center"
-              style={gradientStyle}
+              className="flex justify-center items-center rounded-t-lg bg-[#ECE5FF]"
+              // style={gradientStyle}
             >
               <Image
                 src={item.image}
                 alt="blog"
                 height={300}
                 width={300}
-                className="object-cover"
+                className="object-cover rounded-t-lg"
                 // layout="responsive"
               />
             </div>
-            <div className=" flex flex-col  gap-4 rounded-b-lg " style={bgGradient}>
-              <div className="features_card_header flex flex-col  gap-2 p-3">
-                <button>
-                  <p
-                    className="text-primaryPurple"
-                    style={{ textAlign: "left" }}
-                  >
-                    {item.title}
-                  </p>
-                </button>
+            <div
+              className=" py-3 flex flex-col  gap-4 rounded-b-lg bg-[#F7F8FD]"
+              // style={bgGradient}
+            >
+              <div className="features_card_header flex flex-col  gap-2 p-5">
+                <div>
+                  <Link href={"/company/blogs/article"}>
+                    <p
+                      className="text-primaryPurple"
+                      style={{ textAlign: "left" }}
+                    >
+                      {item.title}
+                    </p>
+                  </Link>
+                </div>
 
                 <p
                   className="features_card_content"
                   style={{ textAlign: "left" }}
                 >
-                  {item?.description.substring(0,100) +"..."}
+                  {item?.description.substring(0, 100) + "..."}
                 </p>
               </div>
-              <div className="flex flex-row justify-between p-2 bg-[#F7F8FD] rounded-b-lg">
+              <div className="flex flex-row justify-between p-5 rounded-b-lg">
                 <div className="flex flex-row justify-center items-center">
                   <Image
                     src={item.writerImage}

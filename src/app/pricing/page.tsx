@@ -11,7 +11,14 @@ function Pricing() {
     <div>
       <HeroAllSection heroContent={heroPricing} />
       <PricingComponent />
-      <Functionality {...Feature7} />
+      <Functionality
+        {...Feature7}
+        externalStyle={{
+          backgroundColor: "#F7F8FD",
+          paddingBottom: 60,
+          paddingTop: 60,
+        }}
+      />
       <ScrollToTopButton />
     </div>
   );

@@ -12,7 +12,7 @@ const Banner = () => {
           options, ensuring a global and inclusive transaction experience.
         </p>
       </div>
-      <div className="w-full">
+      <div className="w-full p-8">
         <Image src={"/cards.svg"} width={100} height={100} alt={"."} layout="responsive" />
       </div>
     </section>

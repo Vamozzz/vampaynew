@@ -9,7 +9,17 @@ import SlickerComponent from "@/components/slicker/slickComponent";
 import Stats from "@/components/stats/stats";
 import IndustrySwiper from "@/components/swiper/swiper";
 import UserBrands from "@/components/userBrands/userBrands";
-import { Feature1, Feature7, FeaturesWithLinkAboutUs1, brands, heroAboutUs, heroPricing, sliderDataPayout1, storyData1, storyData2 } from "@/constants/features";
+import {
+  Feature1,
+  Feature7,
+  FeaturesWithLinkAboutUs1,
+  brands,
+  heroAboutUs,
+  heroPricing,
+  sliderDataPayout1,
+  storyData1,
+  storyData2,
+} from "@/constants/features";
 import React from "react";
 
 const Page = () => {
@@ -17,15 +27,21 @@ const Page = () => {
     <div>
       <HeroAllSection heroContent={heroAboutUs} />
       <FeaturesComponent feature={FeaturesWithLinkAboutUs1} />
-      <OurStory {...storyData1} />
-      <OurStory {...storyData2} />
+      <OurStory
+        {...storyData1}
+        externalStyle={{ backgroundColor: "#F7F8FD" }}
+      />
+      <OurStory
+        {...storyData2}
+        externalStyle={{ backgroundColor: "#F7F8FD", marginBottom: 60 }}
+      />
       <UserBrands brandNames={brands} />
-      <Stats />
       <IndustrySwiper />
-      <SlickerComponent featuresData={sliderDataPayout1}  />
+      <Stats />
+      <SlickerComponent featuresData={sliderDataPayout1} />
       <ScrollToTopButton />
     </div>
   );
-}
+};
 
 export default Page;

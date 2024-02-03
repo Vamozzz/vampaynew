@@ -22,7 +22,7 @@ const Page = () => {
     <div>
       <HeroAllSection heroContent={heroContactUs} />
       <FeaturesComponent feature={FeaturesWithLinkContactUs1} />
-      <ContactForm />
+      <ContactForm externalStyle={{backgroundColor:"#F7F8FD"}} />
       <SlickerComponent featuresData={sliderDataCollection} />
       <ScrollToTopButton />
     </div>

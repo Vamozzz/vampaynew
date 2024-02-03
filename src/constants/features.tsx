@@ -255,7 +255,7 @@ export const FeaturesWithLink1 = {
       cardTitle: "Tailored solution",
       cardContent:
         "Customize your payment experience, finding answers effortlessly without extensive searches.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -263,7 +263,7 @@ export const FeaturesWithLink1 = {
       cardTitle: "Optimal Efficiency",
       cardContent:
         "Vampay's payment solutions adapt to your service needs, ensuring maximum ease and efficiency.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -271,7 +271,7 @@ export const FeaturesWithLink1 = {
       cardTitle: "Seamless Transactions",
       cardContent:
         "Payment solutions match your service requirements for seamless financial operations.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
   ],
@@ -317,7 +317,7 @@ export const FeaturesWithLink3 = {
       cardTitle: "Single Payout",
       cardContent:
         "A hassle-free solution for swift and secure fund disbursement. Experience simplicity and efficiency in just one click.Experience simplicity and efficiency in just one click.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -325,7 +325,7 @@ export const FeaturesWithLink3 = {
       cardTitle: "Bulk payout",
       cardContent:
         "Effortlessly disburse funds to multiple recipients in a single, streamlined process. Simplify large-scale transactions for a seamless and time-saving experience.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -333,7 +333,7 @@ export const FeaturesWithLink3 = {
       cardTitle: "Scheduled payout",
       cardContent:
         "Take control of your financial timeline with Scheduled Payouts. Set it, forget it, and enjoy the convenience of automated, timely disbursements tailored to your preferences.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
   ],
@@ -942,7 +942,7 @@ export const sliderDataCollection = {
       cardTitle: "Single Payout",
       cardContent:
         "A hassle-free solution for swift and secure fund disbursement. Experience simplicity and efficiency in just one click.Experience simplicity and efficiency in just one click.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -950,7 +950,7 @@ export const sliderDataCollection = {
       cardTitle: "Bulk payout",
       cardContent:
         "Effortlessly disburse funds to multiple recipients in a single, streamlined process. Simplify large-scale transactions for a seamless and time-saving experience.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -958,7 +958,7 @@ export const sliderDataCollection = {
       cardTitle: "Scheduled payout",
       cardContent:
         "Take control of your financial timeline with Scheduled Payouts. Set it, forget it, and enjoy the convenience of automated, timely disbursements tailored to your preferences.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
   ],
@@ -972,7 +972,7 @@ export const sliderDataPayout1 = {
       cardTitle: "Collection link",
       cardContent:
         "Instantly generate secure links for seamless transactions and efficient way to send and receive payments with just a click.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -980,7 +980,7 @@ export const sliderDataPayout1 = {
       cardTitle: "POS",
       cardContent:
         "Empower your business operations with cutting-edge technology for enhanced efficiency at the point of sale.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -988,7 +988,7 @@ export const sliderDataPayout1 = {
       cardTitle: "Collection QR",
       cardContent:
         "Lets users quickly find answersto their questions without having to search through muttiple sources.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
   ],
@@ -1002,7 +1002,7 @@ export const sliderDataAboutUs1 = {
       cardTitle: "Collection link",
       cardContent:
         "Lets users quickly find answersto their questions without having to search through muttiple sources.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -1010,7 +1010,7 @@ export const sliderDataAboutUs1 = {
       cardTitle: "Bulk payout",
       cardContent:
         "Empower your business operations with cutting-edge technology for enhanced efficiency at the point of sale.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
     {
@@ -1018,7 +1018,7 @@ export const sliderDataAboutUs1 = {
       cardTitle: "Scheduled payout",
       cardContent:
         "Lets users quickly find answersto their questions without having to search through muttiple sources.",
-      linkText: "read more",
+      linkText: "Read More",
       linkValue: "/products/collection",
     },
   ],

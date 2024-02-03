@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       helvetica: ["var(--font-helvetica)", "Poppins"],
-      // Poppins:["Poppins"]
+      Poppins:["Poppins"]
     },
     extend: {
       screens: {

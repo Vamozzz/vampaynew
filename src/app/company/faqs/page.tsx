@@ -21,7 +21,7 @@ const Page = () => {
     <div>
       <HeroAllSection heroContent={heroFaq} />
       <BasicAccordion accordionData={accordionData} />
-      <ContactForm />
+      <ContactForm externalStyle={{ backgroundColor: "#F7F8FD" }} />
       {/* <ScrollableTabsButtonForce /> */}
       <ScrollToTopButton />
     </div>

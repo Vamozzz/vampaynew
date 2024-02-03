@@ -24,8 +24,8 @@ import {
 function Footer() {
   return (
     <div
-      className="flex flex-col  "
-      style={{ background: "linear-gradient(to right, #E8E2F4, #DDE5F8)" }}
+      className="flex flex-col bg-[#F7F8FD] pt-4 "
+      // style={{ background: "linear-gradient(to right, #E8E2F4, #DDE5F8)" }}
     >
       <div className="flex flex-col lg:flex-row gap-10 py-10 px-5 lg:px-20 ">
         <div className=" flex lg:flex-1 flex-col gap-4">
@@ -52,19 +52,19 @@ function Footer() {
             />
           </div>
         </div>
-        <div className=" flex lg:flex-2 flex-col gap-5 lg:flex-row justify-around">
-          <div className=" flex flex-row gap-10">
+        <div className=" flex lg:flex-2 flex-col gap-5 lg:gap-16 lg:flex-row justify-around">
+          <div className=" flex flex-row gap-16">
             <div className="flex flex-col">
               <p className="text-md mb-2">Products</p>
               <Link
                 href="/products/collection"
-                className="text-md md:block text-[#565758] hover:text-primaryPurple-100 "
+                className="text-md md:block py-1 text-[#565758] hover:text-primaryPurple-100 "
               >
                 Collection
               </Link>
               <Link
                 href="/products/payouts"
-                className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 "
+                className="text-md md:block py-1 text-[#565758]  hover:text-primaryPurple-100 "
               >
                 Payout
               </Link>
@@ -76,36 +76,36 @@ function Footer() {
               </Link> */}
               <Link
                 href="/developerapi"
-                className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 "
+                className="text-md md:block text-[#565758] py-1 hover:text-primaryPurple-100 "
               >
                 API Information
               </Link>
             </div>
           </div>
-          <div className=" flex flex-row gap-10">
+          <div className=" flex flex-row gap-16">
             <div className="flex flex-col">
               <p className="text-md mb-2">Company</p>
               <Link
                 href="/company/aboutus"
-                className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 "
+                className="text-md md:block py-1 text-[#565758]  hover:text-primaryPurple-100 "
               >
                 About us
               </Link>
               <Link
                 href="/company/contactus"
-                className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 "
+                className="text-md md:block py-1 text-[#565758]  hover:text-primaryPurple-100 "
               >
                 Contact us
               </Link>
               <Link
                 href="/company/blogs"
-                className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 "
+                className="text-md md:block py-1 text-[#565758]  hover:text-primaryPurple-100 "
               >
                 Career
               </Link>
               <Link
                 href="/company/faqs"
-                className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 "
+                className="text-md md:block py-1 text-[#565758]  hover:text-primaryPurple-100 "
               >
                 FAQ
               </Link>
@@ -117,13 +117,13 @@ function Footer() {
               <p className="text-md mb-2">Legal</p>
               <Link
                 href="/company/privacy"
-                className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 "
+                className="text-md md:block py-1 text-[#565758]  hover:text-primaryPurple-100 "
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/company/terms"
-                className="text-md md:block text-[#565758]  hover:text-primaryPurple-100 "
+                className="text-md md:block py-1 text-[#565758]  hover:text-primaryPurple-100 "
               >
                 Terms and Conditions
               </Link>
@@ -134,9 +134,9 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-1 flex-col flex-wrap gap-2">
-          <p className="text-md lg:text-center">Find us online</p>
-          <div className="flex flex-wrap justify-start lg:justify-center gap-2 ">
+        <div className=" lg:w-1/2 flex flex-1 flex-col lg:items-center flex-wrap gap-2">
+          <p className="text-md pb-2 lg:text-center">Find us online</p>
+          <div className="lg:w-[40%] flex flex-wrap justify-start lg:justify-start lg:items-center gap-2 ">
             <Image
               src={linkedin}
               width={25}
@@ -190,7 +190,7 @@ function Footer() {
       </div>
       <div className="bg-primaryPurple flex justify-center items-center p-6 ">
         <p className="font-normal text-[10px] lg:text-[16px]  text-[#fff]">
-          © 2022 Vaamoz Online Private Limited. All rights reserved.
+          © 2024 Vampay Fintech Private Limited. All rights reserved.
         </p>
       </div>
     </div>

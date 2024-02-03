@@ -24,17 +24,46 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
-      <UserBrands brandNames={brands} />
       <FeaturesComponent feature={FeaturesWithLink1} />
-      <Functionality {...Feature1} />
+      <UserBrands brandNames={brands} />
+      <Functionality
+        {...Feature1}
+        externalStyle={{
+          backgroundColor: "#F7F8FD",
+          paddingBottom: 60,
+          paddingTop: 60,
+        }}
+      />
       <Functionality {...Feature2} />
-      <IndustrySwiper />
-      <FeaturesComponent feature={FeaturesWithLink2} />
+      <FeaturesComponent
+        feature={FeaturesWithLink2}
+        externalStyle={{
+          backgroundColor: "#F7F8FD",
+          paddingBottom: 60,
+          paddingTop: 60,
+        }}
+      />
       <Functionality {...Feature3} />
-      <Functionality {...Feature4} />
+      <Functionality
+        {...Feature4}
+        externalStyle={{
+          backgroundColor: "#F7F8FD",
+          paddingBottom: 60,
+          paddingTop: 60,
+        }}
+      />
+      <IndustrySwiper />
       <Stats />
+      <Functionality
+        {...Feature6}
+        externalStyle={{
+          backgroundColor: "#F7F8FD",
+          paddingBottom: 60,
+          paddingTop: 60,
+          marginTop:100,
+        }}
+      />
       <Functionality {...Feature5} />
-      <Functionality {...Feature6} />
       <Article />
       <ScrollToTopButton />
     </main>

@@ -58,8 +58,11 @@ const UserBrands: React.FC<UserBrandsProps> = ({
   }, []);
 
   return (
-    <section className="flex flex-col gap-10 mb-4 py-6 bg-grayBackground lg:px-20" style={externalStyle}>
-      <p className="features_title">Trusted By</p>
+    <section
+      className="flex flex-col gap-10 mb-4 py-6 bg-grayBackground lg:px-20"
+      style={externalStyle}
+    >
+      {/* <p className="features_title">Trusted By</p> */}
       {/* <div className="flex flex-row  justify-around items-center gap-4 lg:gap-10 px-10 lg:px-20 py-6 self-center"> */}
       <Slider ref={sliderRef} {...settings}>
         {brandNames.map((brandName) => (
@@ -78,7 +81,7 @@ const UserBrands: React.FC<UserBrandsProps> = ({
         ))}
       </Slider>
       {/* </div> */}
-      <hr className="mx-20"></hr>
+      {/* <hr className="mx-20"></hr>
       <div className="flex flex-col gap-6  justify-center items-center">
         <p>Secure & Compliant</p>
         <div className="flex gap-3 ">
@@ -112,7 +115,7 @@ const UserBrands: React.FC<UserBrandsProps> = ({
             height={30}
           />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

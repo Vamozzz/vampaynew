@@ -70,17 +70,17 @@ interface BlockInfoProps {
 const BlockInfo: React.FC<BlockInfoProps> = ({ title, subTitle, blocks }) => {
   return (
     <section className="flex flex-col gap-5 p-10 lg:px-20">
-      <div className="lg:w-2/3 m-auto flex flex-col gap-2">
+      <div className="lg:w-2/3 m-auto flex flex-col gap-10">
         <div className="features_title">
           <p>{title}</p>
         </div>
         <div className="features_card_content">
-          <p className="">{subTitle}</p>
+          <p className="lg:text-center">{subTitle}</p>
         </div>
       </div>
       <div className="flex flex-col lg:flex-row gap-10 p-6">
         {blocks.map((block, index) => (
-          <div key={index} className="lg:w-1/4 bg-grayBackground p-2 shadow-md">
+          <div key={index} className="lg:w-1/4 bg-grayBackground p-4 shadow-md">
             <div className="features_card_more pb-2">
               <p className="text-center">{block.blockHeader}</p>
             </div>

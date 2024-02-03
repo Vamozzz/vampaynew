@@ -13,21 +13,6 @@ const images = [
     img1: "/Education3.svg",
   },
   {
-    name: "Freelancer",
-    img: "/freelancer3.svg",
-    img1: "/EDUCATION.svg",
-  },
-  {
-    name: "Entertainment",
-    img: "/Entertainment3.svg",
-    img1: "/EDUCATION.svg",
-  },
-  {
-    name: "Automobile",
-    img: "/Automobile3.svg",
-    img1: "/EDUCATION.svg",
-  },
-  {
     name: "Healthcare",
     img: "/healthcare3.svg",
     img1: "/EDUCATION.svg",
@@ -43,6 +28,16 @@ const images = [
     img1: "/EDUCATION.svg",
   },
   {
+    name: "Freelancer",
+    img: "/freelancer3.svg",
+    img1: "/EDUCATION.svg",
+  },
+  {
+    name: "Entertainment",
+    img: "/Entertainment3.svg",
+    img1: "/EDUCATION.svg",
+  },
+  {
     name: "Ecommerce",
     img: "/Ecommerce3.svg",
     img1: "/EDUCATION.svg",
@@ -55,6 +50,11 @@ const images = [
   {
     name: "Technology",
     img: "/Technology3.svg",
+    img1: "/EDUCATION.svg",
+  },
+  {
+    name: "Automobile",
+    img: "/Automobile3.svg",
     img1: "/EDUCATION.svg",
   },
 ];

@@ -26,7 +26,6 @@ import {
 import React from "react";
 
 function Collection() {
-  
   return (
     <div>
       <HeroAllSection heroContent={heroCollection} />
@@ -34,14 +33,32 @@ function Collection() {
       <BlockInfo {...blockCollection1} />
       <FeaturesComponent feature={FeaturesWithLinkCollection1} />
       <StripFeature stripitems={stripFeaturesCollection2} />
-      <Functionality {...FeatureCollection1} />
-      <Functionality {...FeatureCollection2} />
-      <Functionality {...FeatureCollection3} />
-     
+      <Functionality
+        {...FeatureCollection1}
+        externalStyle={{
+          backgroundColor: "#F7F8FD",
+          paddingBottom: 60,
+          paddingTop: 60,
+        }}
+      />
+      <Functionality
+        {...FeatureCollection2}
+        externalStyle={{
+          paddingBottom: 60,
+          paddingTop: 60,
+        }}
+      />
       <Banner />
       <StripFeature stripitems={stripFeaturesCollection3} />
       {/* <FeaturesComponent feature={FeaturesWithLink3} /> */}
-
+      <Functionality
+        {...FeatureCollection3}
+        externalStyle={{
+          backgroundColor: "#F7F8FD",
+          paddingBottom: 60,
+          paddingTop: 60,
+        }}
+      />
       <SlickerComponent featuresData={sliderDataCollection} />
       <ScrollToTopButton />
     </div>
