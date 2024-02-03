@@ -600,7 +600,7 @@ export const FeatureCollection1 = {
     },
   ],
   imageSideLeft: false,
-  featureImage: "/paymentlink.svg",
+  featureImage: "/paymentlink2.svg",
   buttonText: "",
 };
 
@@ -730,7 +730,7 @@ export const FeaturePayout3 = {
     },
   ],
   imageSideLeft: true,
-  featureImage: "/paymentlink.svg",
+  featureImage: "/paymentlink2.svg",
   buttonText: "",
 };
 
@@ -943,7 +943,7 @@ export const sliderDataCollection = {
       cardContent:
         "A hassle-free solution for swift and secure fund disbursement. Experience simplicity and efficiency in just one click.Experience simplicity and efficiency in just one click.",
       linkText: "Read More",
-      linkValue: "/products/collection",
+      linkValue: "/products/payouts",
     },
     {
       cardImage: "/BulkPayouticon.svg",
@@ -951,7 +951,7 @@ export const sliderDataCollection = {
       cardContent:
         "Effortlessly disburse funds to multiple recipients in a single, streamlined process. Simplify large-scale transactions for a seamless and time-saving experience.",
       linkText: "Read More",
-      linkValue: "/products/collection",
+      linkValue: "/products/payouts",
     },
     {
       cardImage: "/Scheduledpayouticon.svg",
@@ -959,7 +959,7 @@ export const sliderDataCollection = {
       cardContent:
         "Take control of your financial timeline with Scheduled Payouts. Set it, forget it, and enjoy the convenience of automated, timely disbursements tailored to your preferences.",
       linkText: "Read More",
-      linkValue: "/products/collection",
+      linkValue: "/products/payouts",
     },
   ],
 };

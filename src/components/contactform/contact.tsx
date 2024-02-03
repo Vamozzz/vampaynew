@@ -191,20 +191,26 @@ const ContactForm: React.FC<FunctionalityProps> = ({
 
   return (
     <div
-      className="flex flex-col md:flex-row items-center"
+      className="flex flex-col md:flex-row justify-center items-center "
       style={externalStyle}
     >
-      <div className="md:w-1/2 order-1 md:order-1">
-        <Image
-          src="/contact.svg"
-          alt="Image"
-          className="w-full h-auto"
-          width={50}
-          height={50}
-        />
-      </div>
+      {isContactFormData ? (
+        <div className="md:w-1/2 order-1 md:order-1">
+          <Image
+            src="/contact.svg"
+            alt="Image"
+            className="w-full h-auto"
+            width={50}
+            height={50}
+          />
+        </div>
+      ) : null}
 
-      <div className="md:w-1/2 order-2 md:order-2 p-8 md:p-12">
+      <div
+        className={`md:w-1/2 order-2 md:order-2 p-8 md:p-12 ${
+          isContactFormData ? "" : "md:w-full md:px-48"
+        }`}
+      >
         {msgDelievered ? (
           <div className="flex justify-center items-center my-3">
             <p className="features_card_header mr-2">{msgDelievered}</p>
@@ -248,7 +254,7 @@ const ContactForm: React.FC<FunctionalityProps> = ({
                 type="text"
                 id="FirstName"
                 name="firstName"
-                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500 outline-none"
+                className="mt-1 p-2 w-full border rounded-md focus:border-primaryPurple outline-none"
                 placeholder="First Name"
                 onChange={handleChange}
                 value={formData?.firstName}
@@ -266,7 +272,7 @@ const ContactForm: React.FC<FunctionalityProps> = ({
                 type="text"
                 id="LastName"
                 name="lastName"
-                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500 outline-none"
+                className="mt-1 p-2 w-full border rounded-md focus:border-primaryPurple outline-none"
                 placeholder="Last Name"
                 onChange={handleChange}
                 value={formData?.lastName}
@@ -287,7 +293,7 @@ const ContactForm: React.FC<FunctionalityProps> = ({
                 type="Email"
                 id="Email"
                 name="email"
-                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500 outline-none"
+                className="mt-1 p-2 w-full border rounded-md focus:border-primaryPurple outline-none"
                 placeholder="Email Address"
                 onChange={handleChange}
                 value={formData?.email}
@@ -305,7 +311,7 @@ const ContactForm: React.FC<FunctionalityProps> = ({
                 type="text"
                 id="ContactNo"
                 name="contactNo"
-                className="mt-1 p-2 w-full border rounded-md focus:border-purple-500 outline-none"
+                className="mt-1 p-2 w-full border rounded-md focus:border-primaryPurple outline-none"
                 placeholder="Contact Number"
                 onChange={handleChange}
                 value={formData?.contactNo}
@@ -315,7 +321,7 @@ const ContactForm: React.FC<FunctionalityProps> = ({
           {isContactFormData ? (
             <FormControl
               fullWidth
-              className="mb-2 focus:border focus:border-purple-500"
+              className="mb-2 hover:border-primaryPurple focus:border focus:border-primaryPurple bg-white outline-none"
             >
               <InputLabel htmlFor="role" id="demo-simple-select-label">
                 Inquiry
@@ -353,7 +359,7 @@ const ContactForm: React.FC<FunctionalityProps> = ({
                 style={{
                   outline: "none",
                   borderColor: "transparent",
-                  focus: "border-purple-500",
+                  focus: "border-primaryPurple",
                 }}
               >
                 <MenuItem value={"Select"}>Select</MenuItem>
@@ -375,7 +381,7 @@ const ContactForm: React.FC<FunctionalityProps> = ({
               id="Message"
               name="message"
               rows={4}
-              className="mt-1 p-2 w-full border rounded-md focus:border focus:border-purple-500"
+              className="mt-1 p-2 w-full border rounded-md focus:border focus:border-primaryPurple"
               placeholder="Your Message"
               onChange={handleTextareaChange}
               value={formData?.message}

@@ -33,7 +33,7 @@ const ExploreComponent = () => {
               Get Started
             </CustomButton>
             <TextButton endIcon={true}>
-              <Link href={"/company/contactus"}>Our features</Link>
+              <Link href={"/company/contactus"}>Our Features</Link>
             </TextButton>
           </div>
         </div>

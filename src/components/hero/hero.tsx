@@ -39,31 +39,32 @@ const Hero = () => {
                 filled={true}
                 buttonMedium={true}
               >
-                Get started
+                Get Started
               </CustomButton>
               <TextButton endIcon={true}>
-                <Link href={"/products/collection"}>Our features</Link>
+                <Link href={"/products/collection"}>Our Features</Link>
               </TextButton>
             </div>
           </div>
         </div>
         <div className=" lg:w-1/2  ">
-          {/* <Image
-            src={heroSection?.heroImage}
+          <Image
+            // src={heroSection?.heroImage}
+            src={"/main-gif.gif"}
             alt="logo"
-            width={80}
-            height={80}
+            width={900}
+            height={900}
             // className="w-auto"
-            layout="responsive"
-          /> */}
-          <object
+            // layout="responsive"
+          />
+          {/* <object
             aria-label="Admin panel display"
-            width={80}
+            width={400}
             height={80}
-            className="b3_gs w-full h-full "
+            className="b3_gs  h-full lg:w-full "
             type="image/svg+xml"
             data="/vampayhome.svg"
-          ></object>
+          ></object> */}
         </div>
       </div>
 

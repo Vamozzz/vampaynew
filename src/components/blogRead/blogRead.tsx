@@ -36,7 +36,7 @@ function ArticleBlog() {
             <div className="flex lg:flex-col justify-center items-center gap-4">
               <p>share</p>
               <Image
-                src={"/Facebook.svg"}
+                src={"/facebook.svg"}
                 width={25}
                 height={25}
                 className=" md:block  hover:cursor-pointer "
