@@ -569,7 +569,7 @@ export const Feature7 = {
   ],
   imageSideLeft: false,
   featureImage: "/comingsoon.svg",
-  buttonText: "Get Started",
+  // buttonText: "Get Started",
 };
 
 export const Feature8 = {

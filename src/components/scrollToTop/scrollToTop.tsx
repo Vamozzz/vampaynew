@@ -43,7 +43,7 @@ const ScrollToTopButton = () => {
       {isScrollDownVisible && (
         <button
           onClick={scrollDown}
-          className="fixed bottom-5 right-5 shadow-lg text-white p-2 rounded-full  focus:outline-none"
+          className="fixed bottom-5 right-5 shadow-lg text-white p-1 rounded-full  focus:outline-none"
         >
           <Image
             src={"/SCROLLDOWN.svg"}
@@ -57,7 +57,7 @@ const ScrollToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-5 right-5 shadow-lg text-white p-2 rounded-full focus:outline-none"
+          className="fixed bottom-5 right-5 shadow-lg bg-white text-white p-1 rounded-full focus:outline-none"
         >
           <Image
             src={"/SCROLLUP.svg"}
