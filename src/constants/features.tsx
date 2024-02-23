@@ -8,6 +8,10 @@ export const navigationItems = [
     link: "/products",
   },
   {
+    name: "Solutions",
+    link: "/solutions",
+  },
+  {
     name: "Pricing",
     link: "/pricing",
   },
@@ -157,6 +161,17 @@ export const heroSection = {
   heroImage: "/vampayhome.svg",
   lineImage: "/Line1.svg",
 };
+
+export const heroSolutions = [
+  {
+    title1: "Vampay's Clientele Snapshot",
+    // spannedTitle: "",
+    // title2: "",
+    content:
+      "Discover the diverse spectrum of businesses that benefit from local enterprises to global corporations, We caters to a broad range of industries, ensuring seamless and secure transactions for all.",
+    lineImage: "/Line1.svg",
+  },
+];
 
 export const heroCollection = [
   {
@@ -582,6 +597,66 @@ export const Feature8 = {
   buttonText: "Developer Tool Kit",
 };
 
+export const FeatureSolution1 = {
+  header: "Optimize the process of collecting fees for",
+  spannedHeader: "Educational Institutions",
+  subHeader:
+    "Vampay empowers businesses with seamless integration between bank accounts and accounting software. Effortlessly manage vendor payments and customer collections, eliminating the hassle of manual processing. Experience the efficiency and organization of Vampay Solutions for your business.",
+  imageSideLeft: false,
+  featureImage: "/Optimizetheprocess.svg",
+  // buttonText: "Developer Tool Kit",
+};
+
+export const FeatureSolution2 = {
+  header: "Effortlessly manage payments through our simplified solutions.",
+  // spannedHeader: "Educational Institutions",
+  subHeader:
+    "Vampay facilitates seamless management of your payables, enabling efficient payments to vendors, suppliers, and employee salaries. With Vampay's user-friendly interface, you can easily initiate payments directly from your linked bank accounts. Our platform ensures hassle-free transaction processing without the need for manual intervention, allowing you to streamline your financial operations effortlessly.",
+  imageSideLeft: true,
+  featureImage: "/Effortlesslymanage.svg",
+  // buttonText: "Developer Tool Kit",
+};
+
+export const FeatureSolution3 = {
+  header: "Rationalizing The Process Of Receiving Client Payments.",
+  // spannedHeader: "Educational Institutions",
+  subHeader:
+    "Effortlessly manage client payments with Vampay's invoicing feature. Send invoices to your clients and receive payments directly into your bank account. Say goodbye to manual payment tracking and hello to streamlined client payments with Vampay.",
+  imageSideLeft: false,
+  featureImage: "/Rationalizing.svg",
+  // buttonText: "Developer Tool Kit",
+};
+
+export const FeatureSolution4 = {
+  header: "Seamless Account-to-Account Transactions",
+  // spannedHeader: "Educational Institutions",
+  subHeader:
+    "you can effortlessly execute instant payments to vendors or employees' bank accounts. Utilize IMPS, UPI, NEFT, or RTGS directly from any of your connected bank accounts with just a few clicks. Enjoy swift and hassle-free transactions, simplifying your financial operations like never before.",
+  imageSideLeft: true,
+  featureImage: "/SeamlessAccount.svg",
+  // buttonText: "Developer Tool Kit",
+};
+
+export const FeatureSolution5 = {
+  header: "Centralized Bank Account Management",
+  // spannedHeader: "Educational Institutions",
+  subHeader:
+    "No more juggling multiple passwords or navigating through various banking portals. With Vampay, you can effortlessly manage all your bank accounts, view balances, pay vendors, and track customer payments from a single, user-friendly dashboard. Enjoy the convenience of streamlined banking and payments, all in one place.",
+  imageSideLeft: false,
+  featureImage: "/Centralized.svg",
+  // buttonText: "Developer Tool Kit",
+};
+
+export const FeatureSolution6 = {
+  header: "Initiate the application for a new business Current Account",
+  // spannedHeader: "Educational Institutions",
+  subHeader:
+    "If your bank is not listed in our network, Vampay offers a convenient solution. You can effortlessly apply for a new business current account directly from our platform. Once approved, you can seamlessly manage your account from the Vampay dashboard, ensuring unified control over your financial operations. Simplify the process of setting up your banking infrastructure with Vampay's intuitive and integrated approach.",
+  imageSideLeft: true,
+  featureImage: "/Initiatetheapplication.svg",
+  // buttonText: "Developer Tool Kit",
+};
+
 export const FeatureCollection1 = {
   header: "Streamline Payments Anywhere with",
   spannedHeader: "Collection Links",
@@ -842,6 +917,25 @@ export const blockDevApi1 = {
     },
   ],
 };
+
+export const stripFeaturesSolutions1 = [
+  {
+    icon: "/Digital_Onboarding.svg",
+    text: "Digital Onboarding",
+  },
+  {
+    icon: "/No_Code_Solution.svg",
+    text: "No Code Solution",
+  },
+  {
+    icon: "/Unlimited_Link_Generation.svg",
+    text: "Unlimited Link Generation",
+  },
+  {
+    icon: "/Multiple_Payment_Modes.svg",
+    text: "Multiple Payment Modes",
+  },
+];
 
 export const stripFeaturesCollection1 = [
   {

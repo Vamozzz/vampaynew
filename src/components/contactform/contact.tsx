@@ -151,9 +151,7 @@ const ContactForm: React.FC<FunctionalityProps> = ({
   };
 
   const handleSubmit = async (e: FormEvent) => {
-    // console.log(e, "eeeerrrrrrrrrrrrreee");
     e.preventDefault();
-    // console.log(formData, "formdata");
 
     if (validationForm()) {
       try {
@@ -186,8 +184,6 @@ const ContactForm: React.FC<FunctionalityProps> = ({
     }
   };
 
-  // console.log(formData, "======><><><>", formErrors);
-  // console.log(agree,"agree");
 
   return (
     <div

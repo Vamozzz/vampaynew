@@ -68,22 +68,30 @@ const IndustrySwiper: React.FC<styleSheet> = ({ externalStyle }) => {
 
   const settings = {
     infinite: true,
-    speed: 500,
-    slidesToShow: 4.05,
+    // speed: 500,
+    slidesToShow: 4,
     slidesToScroll: 3,
-    autoPlay: true,
-    autoplaySpeed: 3000,
+    // autoPlay: true,
+    // autoplaySpeed: 3000,
+
+    autoplay: true,
+    autoplaySpeed: 0, // Set autoplaySpeed to 0 for continuous scrolling
+    speed: 10000, // Adjust speed as needed
+    arrows: false,
+    cssEase: "linear",
+    pauseOnHover: false,
+
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3.1,
+          slidesToShow: 3,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3.1,
+          slidesToShow: 3,
         },
       },
     ],
@@ -97,13 +105,13 @@ const IndustrySwiper: React.FC<styleSheet> = ({ externalStyle }) => {
     sliderRef.current?.slickNext();
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      sliderRef.current?.slickNext();
-    }, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     sliderRef.current?.slickNext();
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div

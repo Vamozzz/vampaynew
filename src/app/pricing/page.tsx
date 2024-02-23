@@ -6,6 +6,12 @@ import React from "react";
 import RootLayout from "../layout";
 import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
 
+export const metadata = {
+  title: "Pricing | Vampay",
+  description:
+    "Vampay - Your All-in-One Payment Powerhouse! Accept Payments from any app through vampay and stay in control with your business.",
+};
+
 function Pricing() {
   return (
     <div>
@@ -14,7 +20,7 @@ function Pricing() {
       <Functionality
         {...Feature7}
         externalStyle={{
-          backgroundColor: "#F7F8FD",
+          backgroundColor: "#F9F8FC",
           paddingBottom: 60,
           paddingTop: 60,
         }}

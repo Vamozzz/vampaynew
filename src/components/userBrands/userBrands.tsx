@@ -19,23 +19,32 @@ const UserBrands: React.FC<UserBrandsProps> = ({
 
   const settings = {
     infinite: true,
-    speed: 500,
+    // speed: 500,
     slidesToShow: 9,
     slidesToScroll: 3,
     autoPlay: true,
-    autoplaySpeed: 3000,
+    // autoplaySpeed: 3000,
+    // arrows: false,
+
+    autoplaySpeed: 0, // Set autoplaySpeed to 0 for continuous scrolling
+    speed: 10000, // Adjust speed as needed
     arrows: false,
+    cssEase: "linear",
+    pauseOnHover: false,
+
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 6,
+          speed: 5000,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
+          speed: 5000,
         },
       },
     ],

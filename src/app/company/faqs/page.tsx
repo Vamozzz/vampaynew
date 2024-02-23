@@ -16,6 +16,12 @@ import {
 } from "@/constants/features";
 import React from "react";
 
+export const metadata = {
+  title: "FAQ | Vampay",
+  description:
+    "Vampay - Your All-in-One Payment Powerhouse! Accept Payments from any app through vampay and stay in control with your business.",
+};
+
 const Page = () => {
   return (
     <div>

@@ -17,12 +17,18 @@ import {
 } from "@/constants/features";
 import React from "react";
 
+export const metadata = {
+  title: "Contact Us | Vampay",
+  description:
+    "Vampay - Your All-in-One Payment Powerhouse! Accept Payments from any app through vampay and stay in control with your business.",
+};
+
 const Page = () => {
   return (
     <div>
       <HeroAllSection heroContent={heroContactUs} />
       <FeaturesComponent feature={FeaturesWithLinkContactUs1} />
-      <ContactForm externalStyle={{backgroundColor:"#F7F8FD"}} />
+      <ContactForm externalStyle={{ backgroundColor: "#F7F8FD" }} />
       <SlickerComponent featuresData={sliderDataCollection} />
       <ScrollToTopButton />
     </div>

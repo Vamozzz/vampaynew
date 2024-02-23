@@ -5,7 +5,7 @@ import CustomButton from "../customButton/customButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import React, { useEffect, useState } from "react";
-import { Collapse, Divider, Menu, MenuItem } from "@mui/material";
+import { Collapse, Divider, Grid, Menu, MenuItem, styled } from "@mui/material";
 import { navigationItems } from "@/constants/features";
 // import TemporaryDrawer from "../drawer/drawer";
 import { usePathname, useRouter } from "next/navigation";
@@ -38,17 +38,31 @@ interface NavigationItem {
   link: string;
 }
 
+interface MenuItem {
+  href: string;
+  text: string;
+  img: any;
+}
+
+interface MenuItemsMap {
+  [key: string]: MenuItem[];
+}
+
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorCollection, setAnchorCollection] = useState(null);
+  const [anchorSolutions, setAnchorSolutions] = useState(null);
   const [activeItem, setActiveItem] = useState("Home");
   const router = usePathname();
+  const Path = useRouter();
   const [state, setState] = React.useState({
     right: false,
   });
   const [open, setOpen] = React.useState(false);
   const [openCompany, setOpenCompany] = React.useState(false);
+  const [openSolutions, setOpenSolutions] = useState(false);
+  const [menuComponent, setMenuComponent] = useState("");
 
   const toggleDrawer =
     (anchor: "right", open: boolean) =>
@@ -66,6 +80,7 @@ const Navbar = () => {
         setState({ ...state, [anchor]: open });
         setOpen(false);
         setOpenCompany(false);
+        setOpenSolutions(false);
       }, 300);
     };
 
@@ -79,42 +94,118 @@ const Navbar = () => {
     } else {
       setActiveItem(upper);
     }
-    // console.log(upper, "upper==>");
   }, [router]);
 
-  // console.log(router, "route==>");
-  // console.log(activeItem, "activeItem==>");
-
   const handleMenuMouseEnter = (event: any) => {
+    event.stopPropagation();
     setAnchorEl(event.currentTarget);
   };
 
   const handleCollectionMouseEnter = (event: any) => {
+    event.stopPropagation();
     setAnchorCollection(event.currentTarget);
   };
 
-  const handleMenuClose = () => {
+  const handleSolutionsMouseEnter = (event: any) => {
+    event.stopPropagation();
+    setAnchorSolutions(event.currentTarget);
+  };
+
+  const handleMenuClose = (event: any) => {
+    event.stopPropagation();
     setAnchorEl(null);
   };
 
-  const handleCollectionClose = () => {
+  const handleCollectionClose = (event: any) => {
+    event.stopPropagation();
     setAnchorCollection(null);
+  };
+
+  const handleSolutionClose = (event: any) => {
+    event.stopPropagation();
+    setAnchorSolutions(null);
   };
 
   const toggleNavigation = () => {
     setShowNav((value) => !value);
   };
 
+  const SolutionsNav = [
+    {
+      href: "/solutions/educational-institutions",
+      text: "Educational Institutions",
+      img: "/EducationaL.svg",
+    },
+    {
+      href: "/solutions/travel-agencies",
+      text: "Travel Agencies",
+      img: "/TravelAgencies.svg",
+    },
+    {
+      href: "/solutions/hospitality",
+      text: "Hospitality",
+      img: "/HospitalitySolution.svg",
+    },
+    {
+      href: "/solutions/lifestyle",
+      text: "Lifestyle",
+      img: "/LifestyleSolution.svg",
+    },
+    {
+      href: "/solutions/tech-services",
+      text: "Tech Services",
+      img: "/TechServicesSolution.svg",
+    },
+    {
+      href: "/solutions/healthcare",
+      text: "Healthcare",
+      img: "/healthcareSolution.svg",
+    },
+    {
+      href: "/solutions/e-commerce-industries",
+      text: "E-commerce Industries",
+      img: "/EcommerceSolution.svg",
+    },
+    {
+      href: "/solutions/major-brands",
+      text: "Major Brands",
+      img: "/MajorBrandsSolution.svg",
+    },
+    {
+      href: "/solutions/small-businesses",
+      text: "Small Businesses",
+      img: "/SmallBusinessesSolution.svg",
+    },
+    {
+      href: "/solutions/resellers-and-retailers",
+      text: "Resellers and Retailers",
+      img: "/ResellersSolution.svg",
+    },
+  ];
+
   const renderMenuItem = (item: NavigationItem) => {
     const { name, link } = item;
-    if (name === "Products" || name === "Company") {
-      const anchor = name === "Products" ? anchorEl : anchorCollection;
+    if (name === "Products" || name === "Company" || name === "Solutions") {
+      const anchor =
+        name === "Products"
+          ? anchorEl
+          : name === "Company"
+          ? anchorCollection
+          : anchorSolutions;
       const handleMouseEnter =
-        name === "Products" ? handleMenuMouseEnter : handleCollectionMouseEnter;
+        name === "Products"
+          ? handleMenuMouseEnter
+          : name === "Company"
+          ? handleCollectionMouseEnter
+          : handleSolutionsMouseEnter;
       const handleClose =
-        name === "Products" ? handleMenuClose : handleCollectionClose;
+        name === "Products"
+          ? handleMenuClose
+          : name === "Company"
+          ? handleCollectionClose
+          : handleSolutionClose;
 
-      const menuItemsMap = {
+      const menuItemsMap: MenuItemsMap = {
         Products: [
           { href: "/products/collection", text: "Collection", img: collection },
           { href: "/products/payouts", text: "Payout", img: payout },
@@ -125,6 +216,58 @@ const Navbar = () => {
           { href: "/company/blogs", text: "Blogs", img: blogs },
           { href: "/company/faqs", text: "FAQs", img: faqs },
         ],
+        Solutions: [
+          {
+            href: "/solutions/educational-institutions",
+            text: "Educational Institutions",
+            img: "/EducationaL.svg",
+          },
+          {
+            href: "/solutions/travel-agencies",
+            text: "Travel Agencies",
+            img: "/TravelAgencies.svg",
+          },
+          {
+            href: "/solutions/hospitality",
+            text: "Hospitality",
+            img: "/HospitalitySolution.svg",
+          },
+          {
+            href: "/solutions/lifestyle",
+            text: "Lifestyle",
+            img: "/LifestyleSolution.svg",
+          },
+          {
+            href: "/solutions/tech-services",
+            text: "Tech Services",
+            img: "/TechServicesSolution.svg",
+          },
+          {
+            href: "/solutions/healthcare",
+            text: "Healthcare",
+            img: "/healthcareSolution.svg",
+          },
+          {
+            href: "/solutions/e-commerce-industries",
+            text: "E-commerce Industries",
+            img: "/EcommerceSolution.svg",
+          },
+          {
+            href: "/solutions/major-brands",
+            text: "Major Brands",
+            img: "/MajorBrandsSolution.svg",
+          },
+          {
+            href: "/solutions/small-businesses",
+            text: "Small Businesses",
+            img: "/SmallBusinessesSolution.svg",
+          },
+          {
+            href: "/solutions/resellers-and-retailers",
+            text: "Resellers and Retailers",
+            img: "/ResellersSolution.svg",
+          },
+        ],
       };
 
       return (
@@ -133,23 +276,52 @@ const Navbar = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleClose}
         >
-          <p className={`cursor-pointer text-[16px]`}>{name}</p>
-          <Menu anchorEl={anchor} open={Boolean(anchor)} onClose={handleClose}>
-            {menuItemsMap[name].map((menuItem, index) => (
-              // <React.Fragment key={index}>
+          <p
+            className={`cursor-pointer text-[16px]`}
+            // onMouseOver={() => setMenuComponent(name)}
+            // onMouseLeave={() => setMenuComponent("")}
+          >
+            {name}
+          </p>
+          {/* {menuComponent && ( */}
+          <Menu
+            anchorEl={anchor}
+            open={Boolean(anchor)}
+            onClose={handleClose}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleClose}
+            transitionDuration={800}
+            PaperProps={{
+              style: {
+                maxHeight: "220px",
+                overflowY: "auto",
+              },
+            }}
+          >
+            {menuItemsMap[name]?.map((menuItem, index) => (
               <MenuItem
                 key={index}
                 component={Link}
                 href={menuItem.href}
-                onClick={handleClose}
+                onClick={(e) => {
+                  handleClose(e);
+                  Path.push(menuItem.href);
+                }}
                 sx={{ paddingTop: 1, paddingBottom: 1 }}
+                className="text-decoration-line: none;"
               >
-                <Image src={menuItem.img} alt={`.`} className="mr-2" />
-                <p className="p-1 text-[16px]">{menuItem.text}</p>
+                <Image
+                  src={menuItem.img}
+                  alt={`.`}
+                  className="mr-2"
+                  width={20}
+                  height={20}
+                />
+                <p className="p-1 text-[16px]">{menuItem.text} </p>
               </MenuItem>
-              // </React.Fragment>
             ))}
           </Menu>
+          {/* )} */}
         </div>
       );
     } else {
@@ -169,6 +341,10 @@ const Navbar = () => {
     setOpenCompany(!openCompany);
   };
 
+  const handleClickSolutions = () => {
+    setOpenSolutions(!openSolutions);
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50">
       <div className="flex justify-between lg:px-20 items-center p-5 bg-white drop-shadow-md ">
@@ -177,7 +353,7 @@ const Navbar = () => {
             <Image src={Logo} alt="logo" width={130} height={30} />{" "}
           </Link>
         </button>
-        <div className="hidden lg:flex md:space-x-4 lg:space-x-8 text-sm mx-2">
+        <div className="hidden lg:flex gap-8 text-sm mx-2">
           {navigationItems.map((item, index) => {
             return (
               <div key={index} className="relative group cursor-pointer">
@@ -188,7 +364,13 @@ const Navbar = () => {
                       : "text-gray-700"
                   }`}
                   onClick={() => {
-                    if (!(item.name == "Products" || item.name == "Company")) {
+                    if (
+                      !(
+                        item.name == "Products" ||
+                        item.name == "Company" ||
+                        item.name == "Solutions"
+                      )
+                    ) {
                       setActiveItem(item.name);
                     }
                   }}
@@ -228,17 +410,23 @@ const Navbar = () => {
             open={state["right"]}
             onClose={toggleDrawer("right", false)}
             onOpen={toggleDrawer("right", true)}
-            PaperProps={{ style: { height: "65vh" } }}
+            PaperProps={{ style: { padding: 10 } }}
+            transitionDuration={800}
           >
             <List
               sx={{ width: "300px", bgcolor: "background.paper" }}
               component="nav"
               aria-labelledby="nested-list-subheader"
-              className="mx-4  "
+              className="mx-4"
             >
               <ListItemButton
-                className="mb-1  my-4 rounded-md  flex justify-end"
+                className="mb-1 my-4 rounded-md  flex justify-end items-end "
                 onClick={toggleDrawer("right", false)}
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  alignItems: "flex-end",
+                }}
               >
                 <Image
                   src={"/CLOSE.svg"}
@@ -251,16 +439,21 @@ const Navbar = () => {
               <ListItemButton
                 className="mb-1  my-2 rounded-md "
                 onClick={toggleDrawer("right", false)}
+                sx={{ marginLeft: 2, marginRight: 2 }}
               >
                 <Image src={"/HOME.svg"} alt={`.`} width={20} height={20} />
                 <Link href="/">
                   <p className="ml-4">Home</p>
                 </Link>
               </ListItemButton>
-              <Divider className="mr-12" />
+              <Divider
+                // className="mx-8"
+                style={{ marginLeft: 20, marginRight: 20 }}
+              />
               <ListItemButton
                 className="mb-1  my-2 rounded-md"
                 onClick={handleClick}
+                sx={{ marginLeft: 2, marginRight: 2 }}
               >
                 <Image src={"/PRODUCT.svg"} alt={`.`} width={20} height={20} />
                 <p className="mx-4">Products</p>
@@ -268,13 +461,13 @@ const Navbar = () => {
               </ListItemButton>
               <Collapse
                 in={open}
-                timeout="auto"
+                timeout={800}
                 unmountOnExit
                 // className="shadow-sm shadow-primaryPurple-100 rounded-lg mt-2"
               >
                 <List component="div" disablePadding>
                   <ListItemButton
-                    sx={{ pl: 4 }}
+                    sx={{ pl: 6 }}
                     onClick={toggleDrawer("right", false)}
                   >
                     <ListItemIcon>
@@ -282,9 +475,12 @@ const Navbar = () => {
                     </ListItemIcon>
                     <Link href="/products/collection">Collection</Link>
                   </ListItemButton>
-                  <Divider className="mx-10" />
+                  <Divider
+                    // className="mx-10"
+                    style={{ marginLeft: 40, marginRight: 40 }}
+                  />
                   <ListItemButton
-                    sx={{ pl: 4 }}
+                    sx={{ pl: 6 }}
                     onClick={toggleDrawer("right", false)}
                   >
                     <ListItemIcon>
@@ -294,30 +490,86 @@ const Navbar = () => {
                   </ListItemButton>
                 </List>
               </Collapse>
-              <Divider className="mr-12" />
+              <Divider
+                // className="mx-8"
+                style={{ marginLeft: 20, marginRight: 20 }}
+              />
+              <ListItemButton
+                className="mb-1  my-2 rounded-md"
+                onClick={handleClickSolutions}
+                sx={{ marginLeft: 2, marginRight: 2 }}
+              >
+                <Image src={"/SOLUTION.svg"} alt={`.`} width={20} height={20} />
+                <p className="mx-4">Solutions</p>
+                {open ? <ExpandLess /> : <ExpandMore />}
+              </ListItemButton>
+              <Collapse
+                in={openSolutions}
+                unmountOnExit
+                timeout={1400}
+                // className="shadow-sm shadow-primaryPurple-100 rounded-lg mt-2"
+              >
+                <List component="div" disablePadding>
+                  {SolutionsNav.map((item, index) => (
+                    <div key={index}>
+                      <ListItemButton
+                        sx={{ pl: 6 }}
+                        onClick={toggleDrawer("right", false)}
+                      >
+                        <ListItemIcon>
+                          <Image
+                            src={item.img}
+                            alt={`.`}
+                            width={30}
+                            height={30}
+                          />
+                        </ListItemIcon>
+                        <Link href={item.href}>{item.text}</Link>
+                      </ListItemButton>
+                      <Divider
+                        // className="mx-10"
+                        style={{ marginLeft: 40, marginRight: 40 }}
+                      />
+                    </div>
+                  ))}
+                </List>
+              </Collapse>
+              <Divider
+                // className="mx-8"
+                style={{ marginLeft: 20, marginRight: 20 }}
+              />
               <ListItemButton
                 className="mb-1  my-2 rounded-md"
                 onClick={toggleDrawer("right", false)}
+                sx={{ marginLeft: 2, marginRight: 2 }}
               >
                 <Image src={"/PRICING.svg"} alt={`.`} width={20} height={20} />
                 <Link href="/pricing">
                   <p className="ml-4">Pricing</p>
                 </Link>
               </ListItemButton>
-              <Divider className="mr-12" />
+              <Divider
+                // className="mx-8"
+                style={{ marginLeft: 20, marginRight: 20 }}
+              />
               <ListItemButton
                 className="mb-1  my-2 rounded-md"
                 onClick={toggleDrawer("right", false)}
+                sx={{ marginLeft: 2, marginRight: 2 }}
               >
                 <Image src={"/DEVAPI.svg"} alt={`.`} width={20} height={20} />
                 <Link href="/developerapi">
                   <p className="ml-4">Developer Api</p>
                 </Link>
               </ListItemButton>
-              <Divider className="mr-12" />
+              <Divider
+                // className="mx-8"
+                style={{ marginLeft: 20, marginRight: 20 }}
+              />
               <ListItemButton
                 className="mb-1  my-2 rounded-md"
                 onClick={handleClickCompany}
+                sx={{ marginLeft: 2, marginRight: 2 }}
               >
                 <Image src={"/COMPANY.svg"} alt={`.`} width={20} height={20} />
                 <p className="mx-4">Company</p>
@@ -325,13 +577,13 @@ const Navbar = () => {
               </ListItemButton>
               <Collapse
                 in={openCompany}
-                timeout="auto"
+                timeout={1000}
                 unmountOnExit
                 // className="shadow-sm shadow-primaryPurple-100 rounded-lg mt-2"
               >
                 <List component="div" disablePadding>
                   <ListItemButton
-                    sx={{ pl: 4 }}
+                    sx={{ pl: 6 }}
                     onClick={toggleDrawer("right", false)}
                   >
                     <ListItemIcon>
@@ -339,9 +591,12 @@ const Navbar = () => {
                     </ListItemIcon>
                     <Link href="/company/aboutus">About us</Link>
                   </ListItemButton>
-                  <Divider className="mx-10" />
+                  <Divider
+                    // className="mx-10"
+                    style={{ marginLeft: 40, marginRight: 40 }}
+                  />
                   <ListItemButton
-                    sx={{ pl: 4 }}
+                    sx={{ pl: 6 }}
                     onClick={toggleDrawer("right", false)}
                   >
                     <ListItemIcon>
@@ -349,9 +604,12 @@ const Navbar = () => {
                     </ListItemIcon>
                     <Link href="/company/contactus">Contact Us</Link>
                   </ListItemButton>
-                  <Divider className="mx-10" />
+                  <Divider
+                    // className="mx-10"
+                    style={{ marginLeft: 40, marginRight: 40 }}
+                  />
                   <ListItemButton
-                    sx={{ pl: 4 }}
+                    sx={{ pl: 6 }}
                     onClick={toggleDrawer("right", false)}
                   >
                     <ListItemIcon>
@@ -359,9 +617,12 @@ const Navbar = () => {
                     </ListItemIcon>
                     <Link href="/company/blogs">Blogs</Link>
                   </ListItemButton>
-                  <Divider className="mx-10" />
+                  <Divider
+                    // className="mx-10"
+                    style={{ marginLeft: 40, marginRight: 40 }}
+                  />
                   <ListItemButton
-                    sx={{ pl: 4 }}
+                    sx={{ pl: 6 }}
                     onClick={toggleDrawer("right", false)}
                   >
                     <ListItemIcon>
@@ -371,9 +632,12 @@ const Navbar = () => {
                   </ListItemButton>
                 </List>
               </Collapse>
-              <Divider className="mr-12" />
+              <Divider
+                // className="mx-8"
+                style={{ marginLeft: 20, marginRight: 20 }}
+              />
             </List>
-            <div className=" flex justify-center items-center gap-6 mt-20 pb-5">
+            <div className=" flex justify-center items-center gap-6 mt-40 pb-5">
               <CustomButton onClick={handleLogin}>login</CustomButton>
               <CustomButton
                 onClick={handleRegister}

@@ -15,6 +15,12 @@ import StripFeature from "@/components/stripFeatures/stripFeatures";
 import ScrollToTopButton from "@/components/scrollToTop/scrollToTop";
 import IndustrySwiper from "@/components/swiper/swiper";
 
+export const metadata = {
+  title: "Developer API | Vampay",
+  description:
+    "Vampay - Your All-in-One Payment Powerhouse! Accept Payments from any app through vampay and stay in control with your business.",
+};
+
 function Page() {
   return (
     <div>
@@ -24,7 +30,7 @@ function Page() {
       <Functionality
         {...Feature8}
         externalStyle={{
-          backgroundColor: "#F7F8FD",
+          backgroundColor: "#F9F8FC",
           paddingBottom: 80,
           paddingTop: 80,
         }}

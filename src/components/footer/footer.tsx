@@ -41,11 +41,11 @@ function Footer() {
             dedicated team.
           </p>
           <div className="flex flex-row justify-start gap-1 items-center">
-            <Image src={"/PCIDSS3.svg"} width={80} height={38} alt="logo" />
-            <Image src={"/SECURE3.svg"} width={80} height={38} alt="logo" />
-            <Image src={"/MAKEININDIA3.svg"} width={80} height={38} alt="logo" />
+            <Image src={"/PCIDSS.svg"} width={80} height={38} alt="logo" />
+            <Image src={"/SECURE.svg"} width={80} height={38} alt="logo" />
+            <Image src={"/MAKEININDIA.svg"} width={80} height={38} alt="logo" />
             <Image
-              src={"/DIGITALINDIA3.svg"}
+              src={"/DIGITALINDIA.svg"}
               width={80}
               height={38}
               alt="logo"

@@ -26,8 +26,13 @@ import {
 } from "@/constants/features";
 import React from "react";
 
+export const metadata = {
+  title: "Payouts | Vampay",
+  description:
+    "Vampay - Your All-in-One Payment Powerhouse! Accept Payments from any app through vampay and stay in control with your business.",
+};
+
 function Payouts() {
-  // 3 components
   return (
     <div>
       <HeroAllSection heroContent={heroPayout} />
@@ -37,7 +42,7 @@ function Payouts() {
       <Functionality
         {...FeaturePayout2}
         externalStyle={{
-          backgroundColor: "#F7F8FD",
+          backgroundColor: "#F9F8FC",
           paddingBottom: 60,
           paddingTop: 60,
         }}
@@ -46,7 +51,7 @@ function Payouts() {
       <Functionality
         {...FeaturePayout4}
         externalStyle={{
-          backgroundColor: "#F7F8FD",
+          backgroundColor: "#F9F8FC",
           paddingBottom: 60,
           paddingTop: 60,
         }}

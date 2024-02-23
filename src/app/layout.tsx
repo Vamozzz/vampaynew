@@ -16,7 +16,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Vampay",
-  description: "Vampay - Your All-in-One Payment Powerhouse! Accept Payments from any app through vampay and stay in control with your business.",
+  description:
+    "Vampay - Your All-in-One Payment Powerhouse! Accept Payments from any app through vampay and stay in control with your business.",
 };
 
 export default function RootLayout({

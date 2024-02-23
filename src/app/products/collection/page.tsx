@@ -25,6 +25,12 @@ import {
 } from "@/constants/features";
 import React from "react";
 
+export const metadata = {
+  title: "Collection | Vampay",
+  description:
+    "Vampay - Your All-in-One Payment Powerhouse! Accept Payments from any app through vampay and stay in control with your business.",
+};
+
 function Collection() {
   return (
     <div>
@@ -36,7 +42,7 @@ function Collection() {
       <Functionality
         {...FeatureCollection1}
         externalStyle={{
-          backgroundColor: "#F7F8FD",
+          backgroundColor: "#F9F8FC",
           paddingBottom: 60,
           paddingTop: 60,
         }}
@@ -54,7 +60,7 @@ function Collection() {
       <Functionality
         {...FeatureCollection3}
         externalStyle={{
-          backgroundColor: "#F7F8FD",
+          backgroundColor: "#F9F8FC",
           paddingBottom: 60,
           paddingTop: 60,
         }}

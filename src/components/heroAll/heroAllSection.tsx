@@ -7,9 +7,9 @@ import Link from "next/link";
 
 interface HeroItem {
   title1: string;
-  spannedTitle: string;
-  title2: string;
-  content: string;
+  spannedTitle?: string;
+  title2?: string;
+  content?: string;
   lineImage: string;
 }
 
@@ -24,11 +24,10 @@ const HeroAllSection: React.FC<HeroAllSectionProps> = ({ heroContent }) => {
     color: "transparent",
   };
 
-
   return (
     <section
       className=""
-      // style={{ background: "linear-gradient(to right, #A5ADFF, #ECCAFF)" }} 
+      // style={{ background: "linear-gradient(to right, #A5ADFF, #ECCAFF)" }}
       style={{ background: "linear-gradient(to bottom, #FFF0F9, #E8E6FD)" }}
     >
       {heroContent.map((item, index) => (

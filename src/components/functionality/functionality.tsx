@@ -17,6 +17,7 @@ interface featurePoint {
 
 interface FunctionalityProps extends featurePoint {
   externalStyle?: React.CSSProperties; // Import CSSProperties from react
+  spanDynamicData?: string;
 }
 
 const Functionality = ({
@@ -28,6 +29,7 @@ const Functionality = ({
   featureImage,
   externalStyle,
   buttonText,
+  spanDynamicData,
 }: FunctionalityProps) => {
   const gradientTextStyle = {
     background: "linear-gradient(to bottom, #FF9DD3, #866AE8)",
@@ -67,7 +69,7 @@ const Functionality = ({
           >
             {header}{" "}
             <span style={gradientTextStyle} className="p-1">
-              {spannedHeader}
+              {spanDynamicData ? spanDynamicData : spannedHeader}
             </span>{" "}
           </p>
         )}
