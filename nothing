@@ -1,0 +1,63 @@
+const { createServer } = require("http");
+const { parse } = require("url");
+const next = require("next");
+// "development" || "production";
+
+const dev = true;
+const hostname = dev ? "localhost" : "vampay.in";
+const port = dev ? 3000 : 443;
+
+const app = next({ dev });
+const handle = app.getRequestHandler();
+
+app.prepare().then(() => {
+  createServer(async (req, res) => {
+    try {
+      const parsedUrl = parse(req.url, true);
+      const { pathname, query } = parsedUrl;
+
+      const customRoutes = {
+        "/": "/",
+        "/products": "/products",
+        "/products/collection": "/products/collection",
+        "/products/payouts": "/products/payouts",
+        "/pricing": "/pricing",
+        "/developerapi": "/developerapi",
+        "/company/aboutus": "/company/aboutus",
+        "/company/contactus": "/company/contactus",
+        "/company/blogs": "/company/blogs",
+        "/company/faqs": "/company/faqs",
+        "/solutions/educational-institutions":
+          "/solutions/educational-institutions",
+        "/solutions/travel-agencies": "/solutions/travel-agencies",
+        "/solutions/hospitality": "/solutions/hospitality",
+        "/solutions/lifestyle": "/solutions/lifestyle",
+        "/solutions/tech-services": "/solutions/tech-services",
+        "/solutions/healthcare": "/solutions/healthcare",
+        "/solutions/e-commerce-industries": "/solutions/e-commerce-industries",
+        "/solutions/major-brands": "/solutions/major-brands",
+        "/solutions/small-businesses": "/solutions/small-businesses",
+        "/solutions/resellers-and-retailers":
+          "/solutions/resellers-and-retailers",
+      };
+      const customRoute = customRoutes[pathname];
+
+      if (customRoute !== undefined) {
+        await app.render(req, res, customRoute, query);
+      } else {
+        await handle(req, res, parsedUrl);
+      }
+    } catch (err) {
+      console.error("Error occurred handling", req.url, err);
+      res.statusCode = 500;
+      res.end("Internal server error");
+    }
+  })
+    .once("error", (err) => {
+      console.error(err);
+      process.exit(1);
+    })
+    .listen(port, hostname, () => {
+      console.log(`> Ready on http${dev ? "" : "s"}://${hostname}:${port}`);
+    });
+});

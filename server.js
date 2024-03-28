@@ -48,7 +48,7 @@ const next = require('next');
 
 const dev = process.env.NODE_ENV !== 'production';
 const hostname = dev ? 'localhost' : 'vampay.in';
-const port = dev ? 3000 : 443;
+const port = dev ? 3001 : 443;
 
 const app = next({ dev });
 const handle = app.getRequestHandler();

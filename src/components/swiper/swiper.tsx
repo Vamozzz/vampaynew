@@ -123,7 +123,10 @@ const IndustrySwiper: React.FC<styleSheet> = ({ externalStyle }) => {
       </div>
       <Slider ref={sliderRef} {...settings}>
         {images.map((image, index) => (
-          <div key={index} className=" flex p-2 ">
+          <div
+            key={index}
+            className=" flex p-2 outline-none focus:outline-none"
+          >
             {/* <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start pb-5">
               <p className=" button_Font lg:ml-[100px] ">{image.name} </p>
             </div> */}

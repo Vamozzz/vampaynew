@@ -321,7 +321,58 @@ const Navbar = () => {
               </MenuItem>
             ))}
           </Menu>
-          {/* )} */}
+          {/* <Menu
+            anchorEl={anchor}
+            open={Boolean(anchor)}
+            onClose={handleClose}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleClose}
+            transitionDuration={800}
+            PaperProps={{
+              style: {
+                maxHeight: "220px",
+                overflowY: "auto",
+                display: "flex", // Ensures items are displayed in a row
+              },
+            }}
+          >
+            {menuItemsMap[name]
+              ?.reduce((chunks, menuItem, index) => {
+                if (index % 4 === 0) {
+                  chunks.push([menuItem]); // Start a new chunk
+                } else {
+                  chunks[chunks.length - 1].push(menuItem); // Add to the current chunk
+                }
+                return chunks;
+              }, [])
+              .map((columnItems, columnIndex) => (
+                <div key={columnIndex} style={{ flex: 1 }}>
+                 
+                  {columnItems.map((menuItem, index) => (
+                    <MenuItem
+                      key={index}
+                      component={Link}
+                      href={menuItem.href}
+                      onClick={(e) => {
+                        handleClose(e);
+                        Path.push(menuItem.href);
+                      }}
+                      sx={{ paddingTop: 1, paddingBottom: 1 }}
+                      className="text-decoration-line: none;"
+                    >
+                      <Image
+                        src={menuItem.img}
+                        alt={`.`}
+                        className="mr-2"
+                        width={20}
+                        height={20}
+                      />
+                      <p className="p-1 text-[16px]">{menuItem.text} </p>
+                    </MenuItem>
+                  ))}
+                </div>
+              ))}
+          </Menu> */}
         </div>
       );
     } else {

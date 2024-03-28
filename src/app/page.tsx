@@ -60,7 +60,7 @@ export default function Home() {
           backgroundColor: "#F7F8FD",
           paddingBottom: 60,
           paddingTop: 60,
-          marginTop:100,
+          marginTop: 100,
         }}
       />
       <Functionality {...Feature5} />
